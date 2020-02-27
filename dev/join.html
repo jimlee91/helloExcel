@@ -1,4 +1,38 @@
 <!-- 회원가입 -->
 @@include('./include/header.html')
-<div class="container"></div>
+<div class="join common-bg">
+    <div class="container container__join">
+        <div class="wrap">
+            <header class="join__header">
+                <img src="" alt="안녕엑셀">
+                <p>견적서에 필요한 단 하나</p>
+            </header>
+            
+            <form action="" class="join__form">
+                <div class="">
+                    <div class="input common">
+                        <input type="text" required placeholder="회사이름">
+                    </div>
+                    <div class="input common">
+                        <input type="email" required placeholder="이메일">
+                    </div>
+                    <div class="input common">
+                        <input type="password" required placeholder="비밀번호">
+                    </div>
+                </div>
+    
+                <button class="btn btn--primary">회원가입</button>
+            </form>
+    
+            <p class="to-login">
+                이미 회원가입을 하셨나요? <a href="">로그인</a>
+            </p>
+    
+        </div>
+
+        <div class="imgbox">
+            <img src="" alt="회원가입 이미지">
+        </div>
+    </div>
+</div>
 @@include('./include/footer.html')

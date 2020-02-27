@@ -12,6 +12,9 @@
         align-items: center;
         max-width: 1440px;
         margin:0 auto;
+        @media screen and (max-width: 768px) {
+            padding: 0;
+        }
     }
 }
 .header__logo {
@@ -21,6 +24,14 @@
     margin-right: 150px;
     a {
         font-size: 14px;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+        margin-right: 100px;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 }
 
@@ -34,6 +45,13 @@
     text-indent: -9999px;
     overflow: hidden;
     margin-right: 25px;
+
+    @media screen and (max-width: 768px) {
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        flex: none;
+    }
 } 
 
 .header__userInfo {
@@ -41,6 +59,10 @@
     align-items: center;
     & > img {
         margin-right: 40px;
+        @media screen and (max-width: 768px) {
+            margin-right: 0;
+            margin:0 20px;
+        }
     }
     .box {
         display: flex;
@@ -52,6 +74,10 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        @media screen and (max-width: 768px) {
+            width: auto;
+            max-width: 110px;
+        }
     }
     .userName {
         width: 80px;
@@ -59,6 +85,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
         opacity: .5;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
 }
 
