@@ -60,7 +60,7 @@ const scss = () => {
 };
 
 const plugin = () => {
-    return gulp.src(["dev/assets/plugins/**/*"], {since: gulp.lastRun(plugin)})
+    return gulp.src(["dev/assets/plugins/**/*"])
         .pipe(gulp.dest("dist/assets/plugins"))
 };
 
@@ -105,10 +105,9 @@ const clean = () => {
     return del('dist');
 };
 
-// css or scss 선택
 exports.default = gulp.series(
     clean,
-    gulp.parallel(html, css, js, plugin, minImg, json),
+    gulp.parallel(html, scss, js, plugin, minImg, json),
     gulp.parallel(server, watchTask),
 );
 

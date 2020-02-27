@@ -1,0 +1,149 @@
+// 카드형식 리스트
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.list--card {
+    .card {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        cursor: pointer;
+        @include shadow;
+        .card__header {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $border;
+            .card__content {
+                color: $oc-gray-6;
+                font-weight: 500;
+                font-size: 13px;
+                b { color: $oc-gray-9; }
+            }
+            .tag { font-size: 12px; }
+        }
+        .card__title {
+            overflow: hidden;
+            display: -webkit-box;
+            width: 75%;
+            max-height: 3em;
+            font-weight: 700;
+            font-size: 15px;
+            text-overflow: ellipsis;
+            line-height: 1.5em;
+            word-wrap: break-word;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .card__title ~ .card__title {
+            margin-left: 10px;
+            text-align: right;
+        }
+        .tag { max-height: max-content; }
+        .card__row {
+            margin-top: 15px;
+            .card__subtitle {
+                display: inline-block;
+                width: 35%;
+                color: $oc-gray-6;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.5em;
+            }
+            .card__content {
+                overflow: hidden;
+                display: -webkit-box;
+                //width: 65%;
+                max-height: 1.5em;
+                font-weight: 400;
+                font-size: 14px;
+                text-align: right;
+                text-overflow: ellipsis;
+                line-height: 1.5em;
+                word-wrap: break-word;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                .switch {
+                    .switch__icon {
+                        position: relative;
+                        width: 31px;
+                        height: 16px;
+                        border-radius: 8px;
+                        background-color: $oc-gray-5;
+                        transform: translateY(1px);
+                        &:before {
+                            position: absolute;
+                            top: 3px;
+                            right: 3px;
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: white;
+                            content: '';
+                        }
+                    }
+                    .switch__text {
+                        margin-left: 8px;
+                        font-weight: 500;
+                        font-size: 13px;
+                    }
+                }
+                .switch.switch--on {
+                    .switch__icon {
+                        background-color: $primary;
+                        &:before { left: 3px; }
+                    }
+                    .switch__text { color: $primary; }
+                }
+            }
+        }
+    }
+}
+
+// 테이블형식 리스트
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.list--table {
+    width: 100%;
+    font-size: 14px;
+    .table__row {
+        border-bottom: 1px solid $border;
+        transition: 0.2s ease-out;
+        cursor: pointer;
+        &:hover { background-color: $oc-gray-0; }
+        .table__header { padding: 20px 12px; font-weight: 600; }
+        .table__data {
+            overflow: hidden;
+            max-width: 250px;
+            padding: 20px 12px;
+            font-weight: 400;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            .switch {
+                transform: translateY(-2px);
+                .switch__icon {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: $oc-gray-5;
+                }
+                .switch__text {
+                    margin-left: 8px;
+                    color: $oc-gray-6;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+            }
+            .switch.switch--on {
+                .switch__icon { background-color: $primary; }
+                .switch__text { color: $primary; }
+            }
+        }
+
+    }
+    .table__row:first-child {
+        border-top: 1px solid $oc-gray-9;
+        border-bottom: 1px solid $oc-gray-9;
+        cursor: default;
+        &:hover { background-color: transparent; }
+    }
+}

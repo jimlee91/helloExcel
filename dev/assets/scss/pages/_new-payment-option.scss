@@ -1,0 +1,170 @@
+// 신규발행 - 결제 옵션
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.new-payment-option {
+    .payment-option {
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        &:hover { border: 1px solid $primary;}
+        @include shadow;
+        background-color: white;
+        .option__header {
+            padding: 18px 20px 15px;
+            border-bottom: 1px dashed $border;
+            .title {
+                font-weight: 700;
+                font-size: 18px;
+            }
+            .subtitle {
+                margin-top: 3px;
+                color: $oc-gray-6;
+                font-weight: 400;
+                font-size: 13px;
+            }
+            .select-wrap {
+                &:after { top: 13px; }
+                .select {
+                    margin-top: 0;
+                    padding: 6px 12px 7px;
+                    font-weight: 700;
+                }
+            }
+            .checkbox-wrapper {
+                .checkbox__icon {
+                    position: relative;
+                    display: inline-block;
+                    width: 35px;
+                    height: 35px;
+                    margin-left: 15px;
+                    border: 1px solid $border;
+                    border-radius: $border-radius;
+                    &:before {
+                        position: absolute;
+                        top: 11px;
+                        left: 10px;
+                        display: inline-block;
+                        width: 11px;
+                        height: 5px;
+                        border: solid $border;
+                        border-width: 0 0 2px 2px;
+                        transform: rotate(-45deg);
+                        content: '';
+                    }
+                }
+                .checkbox { display: none; }
+                //.checkbox[type=checkbox]:checked+label .checkbox__icon {
+                //    border-color: $primary;
+                //    background-color: $primary;
+                //    &:before { border-color: white; }
+                //}
+              .checkbox__icon.checked {
+                border-color: $primary;
+                background-color: $primary;
+                &:before { border-color: white; }
+              }
+            }
+        }
+        .info-wrap {
+            padding: 15px 20px;
+            .info {
+                width: 30%;
+                .title { font-size: 14px; }
+                .content {
+                    margin-top: 4px;
+                    color: $oc-gray-6;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+    .conditional-payment-option__title {
+        margin-top: 20px;
+    }
+    .conditional-payment-option {
+        min-width: 320px;
+        margin-top: 15px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        @include shadow;
+        background-color: white;
+        .discount {
+            padding: 15px 20px 18px;
+            border-bottom: 1px dashed $border;
+            .title { font-size: 15px; }
+            .switch-wrap {
+                z-index: 1;
+                position: relative;
+                &:before {
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                    width: 90px;
+                    height: 27px;
+                    border: 1px solid $border;
+                    border-radius: $border-radius;
+                    content: '';
+                }
+                .switch { display: none; }
+                .switch__label {
+                    width: 45px;
+                    padding: 5px 8px 6px;
+                    height: 27px;
+                    border: 1px solid transparent;
+                    border-radius: $border-radius;
+                    color: $oc-gray-5;
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-align: center;
+                }
+                .switch[type=radio]:checked + .switch__label {
+                    border-color: $primary;
+                    color: $primary;
+                }
+            }
+        }
+        .discount-result {
+            padding: 15px 20px;
+            .title { font-size: 15px; }
+            .content { font-size: 15px; }
+            .form__mixed {
+                margin-top: 15px;
+                .select-wrap {
+                    .select { font-size: 13px; }
+                }
+                .input__text { font-size: 13px; }
+                .input__add-on {
+                    height: auto;
+                    font-size: 14px;
+                }
+            }
+            .total {
+                margin-top: 15px;
+                padding: 12px 15px;
+                border: 1px solid $primary;
+                border-radius: $border-radius;
+                background-color: rgba(21, 170, 191, 0.05);
+                .title,
+                .content {
+                    color: $primary;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .new-payment-option {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        .four.columns ~ .four.columns {
+            margin-top: 20px;
+        }
+        .conditional-payment-option__title {
+            margin-top: 30px;
+        }
+    }
+}

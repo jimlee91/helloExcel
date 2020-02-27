@@ -1,0 +1,157 @@
+// 발송리스트/수신리스트 검색필터
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.filter-wrap {
+    z-index: 1;
+    position: relative;
+    .filter {
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        display: none;
+        max-width: 360px;
+        width: 100vw;
+        margin-top: 4px;
+        border: 1px solid $oc-gray-4;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        // 기간 설정
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .set-period {
+            padding: 20px;
+            .period-btn {
+                .btn ~ .btn { margin-left: 10px; }
+            }
+            .period {
+                margin-top: 15px;
+                .form__text {
+                    max-width: 150px;
+                    .input__text { margin-top: 0; }
+                }
+                .swung-dash {
+                    width: 20px;
+                    padding-top: 10px;
+                    text-align: center;
+                    font-size: 20px;
+                }
+            }
+        }
+        // 필터 리스트
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .filter-list {
+            .component__header {
+                padding: 12px 20px;
+                border-top: 1px solid $border;
+                border-bottom: 1px solid $border;
+                cursor: pointer;
+                &:hover { background-color: $oc-gray-0; }
+                .title {
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+                .arrow {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border: 0 solid $oc-gray-9;
+                    border-width: 0 0 2px 2px;
+                    transform: translateX(-5px) translateY(-3px) rotate(-45deg);
+                    transition: 0.2s ease-out;
+                }
+            }
+            .component__content {
+                display: none;
+                padding: 16px 20px;
+                border-bottom: 1px solid $border;
+                background-color: $oc-gray-0;
+                .form__check {
+                    .checkbox__label {
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                    .checkbox__icon {
+                        position: relative;
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid $border;
+                        border-radius: $border-radius;
+                        background-color: white;
+                        &:before {
+                            position: absolute;
+                            top: 5px;
+                            left: 4px;
+                            display: inline-block;
+                            width: 8px;
+                            height: 3px;
+                            border: solid $border;
+                            border-width: 0 0 2px 2px;
+                            transform: rotate(-45deg);
+                            content: '';
+                        }
+                    }
+                    .checkbox { display: none; }
+                    .checkbox[type=checkbox]:checked+label .checkbox__icon {
+                        border-color: $primary;
+                        background-color: $primary;
+                        &:before { border-color: white; }
+                    }
+                }
+                .form__check ~ .form__check { margin-top: 15px; }
+            }
+        }
+        .filter-list ~ .filter-list {
+            .component__header { border-top: none }
+        }
+        // 필터 리스트 -- 클릭해서 열었을 때
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .filter-list.filter-list--open {
+            .component__header {
+                .arrow { transform: translateX(-5px) translateY(2px) rotate(135deg); }
+            }
+            .component__content { display: block; }
+        }
+        // 필터 적용버튼
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .btn-wrap {
+            padding: 15px 20px;
+            border-top: 1px solid $border;
+            .btn.btn--primary { width: 100%; }
+        }
+    }
+    .filter.filter--open { display: block; }
+}
+
+.modal-wrap.filter-wrap {
+    padding: 0;
+    .filter {
+        overflow: scroll;
+        padding-top: 60px;
+        .bye_nav {
+            .nav__close { display: block; }
+        }
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        max-width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+        .set-period {
+            padding: 20px;
+            .period {
+                .form__text { max-width: 100%; }
+            }
+        }
+        .btn-wrap {
+            z-index: 2;
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+            background-color: white;
+        }
+    }
+}

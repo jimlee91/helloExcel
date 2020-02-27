@@ -1,0 +1,91 @@
+// 비용 전체내역보기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.cost-handling-details {
+    .cost-handling-list {
+        padding: 20px 30px 30px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        .logo-wrap {
+            .logo { max-height: 43px; }
+        }
+        // 검색창
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .input--search {
+            position: relative;
+            width: 350px;
+            font-size: 14px;
+            &:before {
+                position: absolute;
+                top: 49%;
+                left: 15px;
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 300;
+                font-size: 16px;
+                transform: translate(0, -50%);
+                content: "\f002";
+            }
+            .input__text {
+                padding: 10px 16px 11px 42px;
+                margin: 0;
+            }
+            .btn { margin: 0; }
+        }
+        // 필터
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .filter-wrap { margin-left: 15px; }
+        // 테이블
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .table-wrap {
+            overflow: auto;
+        }
+        .list--table {
+            margin-top: 30px;
+            .table__row:hover {
+                background-color: transparent;
+                cursor: auto;
+            }
+            .select-wrap {
+                &:after {
+                    top: 43%;
+                    right: 11px;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                .select {
+                    min-width: 85px;
+                    margin: 0;
+                    padding: 5px 9px 6px;
+                    padding-right: 22px;
+                    cursor: pointer;
+                }
+            }
+            .btn {
+                padding: 5px 11px 6px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .body-container.preview {
+        padding: 0;
+    }
+    .cost-handling-details {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        .cost-handling-list {
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            .input--search {
+                width: 100%;
+                margin-bottom: 10px;
+                .input__text { border-radius: $border-radius; }
+                .btn { display: none; }
+            }
+            .list--card { margin-top: 20px; }
+        }
+    }
+}

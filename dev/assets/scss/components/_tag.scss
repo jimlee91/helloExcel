@@ -1,0 +1,61 @@
+.tag {
+    display: inline-block;
+    padding: 5px 15px 6px;
+    border-radius: $border-radius;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: $oc-gray-0;
+    i { margin-right: 10px; }
+}
+.tag.tag--outline {
+    border: 1px solid $border;
+    background-color: transparent;
+}
+.tag.tag--red {
+    color: $oc-red-6;
+    background-color: $oc-red-0;
+}
+.tag.tag--pink {
+    color: $oc-pink-6;
+    background-color: $oc-pink-0;
+}
+.tag.tag--grape {
+    color: $oc-grape-6;
+    background-color: $oc-grape-0;
+}
+.tag.tag--violet {
+    color: $oc-violet-6;
+    background-color: $oc-violet-0;
+}
+.tag.tag--indigo {
+    color: $oc-indigo-6;
+    background-color: $oc-indigo-0;
+}
+.tag.tag--blue {
+    color: $oc-blue-6;
+    background-color: $oc-blue-0;
+}
+.tag.tag--cyan {
+    color: $oc-cyan-6;
+    background-color: $oc-cyan-0;
+}
+.tag.tag--teal {
+    color: $oc-teal-6;
+    background-color: $oc-teal-0;
+}
+.tag.tag--green {
+    color: $oc-green-6;
+    background-color: $oc-green-0;
+}
+.tag.tag--lime {
+    color: $oc-lime-6;
+    background-color: $oc-lime-0;
+}
+.tag.tag--yellow {
+    color: $oc-yellow-6;
+    background-color: $oc-yellow-0;
+}
+.tag.tag--orange {
+    color: $oc-orange-6;
+    background-color: $oc-orange-0;
+}

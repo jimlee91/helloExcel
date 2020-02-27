@@ -1,0 +1,79 @@
+// btn
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.btn {
+    padding: 10px 16px 11px;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    text-align: center;
+    font-family : inherit;
+    font-weight: 600;
+    font-size: 13px;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+  display: initial;
+  line-height: initial;
+
+}
+
+.btn--primary {
+    background-color: $primary;
+    color: $oc-white;
+    &:hover { background-color: $primary--dark;
+      color: $oc-white;
+    }
+}
+
+.btn-outline--primary {
+    border-color: $primary;
+    background-color: transparent;
+    color: $primary;
+    &:hover {
+      background-color: $oc-cyan-0;
+      color: $primary;
+    }
+}
+.btn-outline--primary-dash {
+  border-style: dashed;
+  border-color: $primary;
+  background-color: transparent;
+  color: $primary;
+  &:hover {
+    background-color: $oc-cyan-0;
+    color: $primary;
+  }
+}
+.btn-outline--secondary {
+    border-color: $oc-gray-4;
+    background-color: transparent;
+    color: $oc-gray-8;
+    &:hover {
+      background-color: $oc-gray-0;
+      color: $oc-gray-8;}
+}
+.btn-outline--danger {
+    border-color: $oc-red-7;
+    background-color: transparent;
+    color: $oc-red-7;
+    &:hover { background-color: $oc-red-0; }
+}
+
+.btn--add.btn-outline--secondary {
+    border-style: dashed;
+    background-color: $oc-gray-0;
+    &:hover { background-color: $oc-gray-1; }
+}
+
+.btn--text {
+    padding: 0;
+    background-color: transparent;
+    color: $primary;
+    font-weight: 600;
+}
+
+.btn--text.btn--danger {
+    color: $oc-red-7;
+}
+
+@media (max-width: $mobile-max-width) {
+    .btn { font-size: 14px; }
+}

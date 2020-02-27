@@ -1,0 +1,265 @@
+// 모달 기본형
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgba(33, 37, 41, 0.3);
+    .ml-10 { margin-left: 10px; }
+    .modal {
+        max-width: 400px;
+        width: 100%;
+        padding: 30px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        .title {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 23px;
+        }
+        .description {
+            margin-top: -15px;
+            text-align: center;
+            color: $oc-gray-6;;
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+        .divider {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-bottom: 1px dashed #ced4da;
+        }
+        .list-wrap {
+            overflow: auto;
+            max-height: 65vh;
+            scrollbar-width: none;
+            &::-webkit-scrollbar { display: none; }
+            .list__item {
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+        }
+        .btn-wrap {
+            position: relative;
+            padding-top: 20px;
+            .btn { width: 100%; }
+            .btn ~ .btn { margin-left: 15px; }
+        }
+    }
+}
+
+// 계좌 선택하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.select-account {
+  .list-wrap {
+    padding-bottom: 50px;
+    .list__item {
+      padding: 15px;
+      border: 1px solid $border;
+      border-radius: $border-radius;
+      @include shadow;
+      &:hover { background-color: $oc-gray-0; }
+      .account__name { font-size: 15px; }
+      .account__num {
+        font-weight: 400;
+        font-size: 15px;
+      }
+    }
+    .list__item ~ .list__item { margin-top: 15px; }
+  }
+  .btn-wrap {
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: 50px;
+      display: inline-block;
+      width: 100%;
+      height: 80px;
+      //background: linear-gradient(
+      //    to top,
+      //    hsl(0, 0%, 100%) 0%,
+      //    hsla(0, 0%, 100%, 0.987) 8.1%,
+      //    hsla(0, 0%, 100%, 0.951) 15.5%,
+      //    hsla(0, 0%, 100%, 0.896) 22.5%,
+      //    hsla(0, 0%, 100%, 0.825) 29%,
+      //    hsla(0, 0%, 100%, 0.741) 35.3%,
+      //    hsla(0, 0%, 100%, 0.648) 41.2%,
+      //    hsla(0, 0%, 100%, 0.55) 47.1%,
+      //    hsla(0, 0%, 100%, 0.45) 52.9%,
+      //    hsla(0, 0%, 100%, 0.352) 58.8%,
+      //    hsla(0, 0%, 100%, 0.259) 64.7%,
+      //    hsla(0, 0%, 100%, 0.175) 71%,
+      //    hsla(0, 0%, 100%, 0.104) 77.5%,
+      //    hsla(0, 0%, 100%, 0.049) 84.5%,
+      //    hsla(0, 0%, 100%, 0.013) 91.9%,
+      //    hsla(0, 0%, 100%, 0) 100%
+      //);
+      content: ''
+    }
+  }
+}
+
+// 카드 정보 등록하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    .modal.add-card-info {}
+}
+
+// 세금계산서 발행하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    .modal.tax-invoice {
+        .form__input { margin-top: 20px; }
+        .form__textarea { margin-top: 20px; }
+        .file-wrap {
+            margin-top: 20px;
+            .subtitle {
+                display: block;
+                text-align: left;
+                font-weight: 700;
+                font-size: 14px;
+            }
+            .btn-wrap {
+                margin-top: 10px;
+                padding: 0px;
+                .btn i { margin-right: 8px; }
+            }
+            .file__item {
+                width: 100%;
+                margin-top: 10px;
+                padding: 15px 20px;
+                border: 1px solid $primary;
+                border-radius: $border-radius;
+                background-color: rgba(21, 170, 191, 0.05);
+                color: $primary;
+                text-align: left;
+                font-weight: 600;
+                font-size: 14px;
+                transition: 0.2s ease-out;
+                cursor: pointer;
+                i { margin-right: 10px; }
+            }
+            .file__item.uploded {
+                border-color: $border;
+                background-color: $oc-gray-0;
+                color: $oc-gray-9;
+                font-weight: 500;
+                cursor: auto;
+                &:hover { background-color: $oc-gray-0; }
+            }
+        }
+    }
+}
+
+// 세금계산서 발행하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    .modal.file-download {
+        .item-wrap {
+            .item {
+                display: inline-block;
+                min-height: 34px;
+                margin-right: 4px;
+                margin-bottom: 6px;
+                padding: 6px 12px;
+                border: 1px solid $border;
+                border-radius: $border-radius;
+                font-size: 15px;
+                background-color: $oc-gray-0;
+                transition: 0.2s ease-out;
+                cursor: pointer;
+                &:hover { background-color: $oc-gray-1; }
+                i { margin-right: 7px; }
+            }
+        }
+    }
+}
+
+// 안내사항 템플릿 선택하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    .modal.select-advice-template {
+        .list-wrap {
+            padding-bottom: 50px;
+            .list__item {
+                padding: 15px 20px;
+                border: 1px solid $border;
+                border-radius: $border-radius;
+                @include shadow;
+                &:hover { background-color: $oc-gray-0; }
+                .advice__name { font-size: 15px; }
+                .advice__content {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    max-height: 1.5em;
+                    margin-top: 8px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-overflow: ellipsis;
+                    line-height: 1.5em;
+                    word-wrap: break-word;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+            }
+            .list__item ~ .list__item { margin-top: 15px; }
+        }
+        .btn-wrap {
+            &:before {
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+                display: inline-block;
+                width: 100%;
+                height: 80px;
+                background: linear-gradient(
+                    to top,
+                    hsl(0, 0%, 100%) 0%,
+                    hsla(0, 0%, 100%, 0.987) 8.1%,
+                    hsla(0, 0%, 100%, 0.951) 15.5%,
+                    hsla(0, 0%, 100%, 0.896) 22.5%,
+                    hsla(0, 0%, 100%, 0.825) 29%,
+                    hsla(0, 0%, 100%, 0.741) 35.3%,
+                    hsla(0, 0%, 100%, 0.648) 41.2%,
+                    hsla(0, 0%, 100%, 0.55) 47.1%,
+                    hsla(0, 0%, 100%, 0.45) 52.9%,
+                    hsla(0, 0%, 100%, 0.352) 58.8%,
+                    hsla(0, 0%, 100%, 0.259) 64.7%,
+                    hsla(0, 0%, 100%, 0.175) 71%,
+                    hsla(0, 0%, 100%, 0.104) 77.5%,
+                    hsla(0, 0%, 100%, 0.049) 84.5%,
+                    hsla(0, 0%, 100%, 0.013) 91.9%,
+                    hsla(0, 0%, 100%, 0) 100%
+                );
+                content: ''
+            }
+        }
+    }
+}
+
+// 안내사항 템플릿 추가하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    .modal.add-advice-template {
+        .form__textarea { margin-top: 15px; }
+    }
+}
+
+// 비밀번호 찾기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    .modal.find-pw {}
+}
+
+// 이메일 인증
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.modal-wrap {
+    .modal.email-verify {}
+}

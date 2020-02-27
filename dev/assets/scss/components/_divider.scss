@@ -1,0 +1,10 @@
+// divider
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.divider {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 0; // 기본 padding 초기화
+    padding-bottom: 20px;
+    border: 0;
+    border-bottom: 1px dashed $oc-gray-4;
+}

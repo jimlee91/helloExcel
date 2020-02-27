@@ -1,0 +1,45 @@
+// 로그인페이지
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.login {
+    background-color: $oc-gray-0;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    .login-form {
+        max-width: 450px;
+        width: 100%;
+        padding: 40px;
+        border: 1px solid $border;
+        border-radius: 5px;
+        background-color: $oc-white;
+        box-shadow: 0 2px 4px $border;
+        .title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .link-wrap {
+            margin-top: 25px;
+            text-align: center;
+            color: $oc-gray-6;
+            font-weight: 500;
+            font-size: 14px;
+            .link {
+                color: $primary--dark;
+            }
+        }
+        .link-wrap ~ .link-wrap { margin-top: 15px; }
+        .btn {
+            width: 100%;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }   
+}
+
+@media (max-width: $mobile-max-width) {
+    .login {
+        .login-form {
+            margin: 0 25px;
+        }
+    }
+}

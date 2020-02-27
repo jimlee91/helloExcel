@@ -1,0 +1,63 @@
+.chip {
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    border: 1px solid $border;
+    border-radius: $border-radius;
+    background-color: white;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    @include shadow;
+    &:hover { background-color: $oc-gray-0; }
+    &:before {
+        position: absolute;
+        top: -22px;
+        right: -22px;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        background-color: $border;
+        transform: rotate(45deg);
+        content: '';
+    }
+    &:after {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        display: inline-block;
+        width: 10px;
+        height: 5px;
+        border: solid white;
+        border-width: 0 0 2px 2px;
+        transform: rotate(-45deg);
+        content: '';
+    }
+    .icon-wrap {
+        width: 54px;
+        height: 54px;
+        margin-right: 15px;
+        i {
+            color: $oc-gray-7;
+            font-size: 36px;
+        }
+    }
+    .chip__title {
+        color: $oc-gray-7;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .chip__subtitle {
+        font-weight: 400;
+        font-size: 15px;
+        color: $oc-gray-6;
+    }
+}
+.chip ~ .chip { margin-top: 20px; }
+.chip.chip--confirmed {
+    border-color: $primary;
+    &:before { background-color: $primary; }
+    .icon-wrap {
+        i { color: $primary; }
+    }
+    .chip__title { color: $primary; }
+}

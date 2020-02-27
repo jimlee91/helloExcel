@@ -1,0 +1,42 @@
+// 문의하기 페이지 sidebar 포함
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.ask-sidebar {
+    .ask-form {
+        max-width: 600px;
+        width: 100%;
+        margin-top: 30px;
+        padding: 40px;
+        border: 1px solid $border;
+        border-radius: 5px;
+        background-color: $oc-white;
+        box-shadow: 0 2px 4px $border;
+        .title {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .description {
+            text-align: center;
+            color: $oc-gray-6;
+        }
+        .divider {
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 30px;        
+            border: 0;
+            border-bottom: 1px dashed #ced4da;
+        }
+        .form__textarea { margin-top: 20px; }
+        .btn {
+            width: 100%;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }   
+}
+
+@media (max-width: $mobile-max-width) {
+    .ask-sidebar {
+        margin-top: 60px;
+        .ask-form { margin: 0; }
+    }
+}

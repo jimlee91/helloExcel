@@ -1,0 +1,27 @@
+// 결제내역 페이지
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.payment-details {
+    .payment-list {
+        padding: 20px 30px 30px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        // 테이블
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .list--table { margin-top: 10px; }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .payment-details {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        .payment-list {
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            .list--card { margin-top: -20px; }
+        }
+    }
+}

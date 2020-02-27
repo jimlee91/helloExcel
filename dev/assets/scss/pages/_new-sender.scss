@@ -1,0 +1,57 @@
+// 신규발행 - 발신인정보
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.new-sender {
+    .company-info,
+    .manager-info {
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+    }
+    // 담당자 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .manager-info {
+        .component__header {
+            border: none; 
+            transition: 0.2s ease-out;
+            cursor: pointer;
+            &:hover { background-color: $oc-gray-0; }
+            .arrow {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 0 solid $oc-gray-9;
+                border-width: 0 0 2px 2px;
+                transform: rotate(-45deg);
+                transition: 0.2s ease-out;
+            }
+        }
+        .component__content { display: none; }
+        .btn.btn-outline--danger {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .manager-info ~ .btn.btn-outline--primary {
+        width: 100%;
+        margin-top: 20px;
+        border-style: dashed;
+    }
+    // 담당자 정보 -- 클릭해서 열었을 때
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .manager-info.manager-info--open {
+        .component__header {
+            border-bottom: 1px dashed $border;
+            .arrow { transform: translateY(8px) rotate(135deg); }
+        }
+        .component__content { display: block; }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .new-sender {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        .six.columns ~ .six.columns { margin-top: 20px; }
+    }
+}

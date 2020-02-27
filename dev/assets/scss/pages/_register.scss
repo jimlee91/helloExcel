@@ -1,0 +1,251 @@
+// 가입하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.register {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    // 필수 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .register-info {
+        max-width: 900px;
+        width: 100%;
+        .left {
+            min-width: 180px;
+            .title { margin-top: 20px; }
+        }
+        .right {
+            margin-left: 100px;
+            border: 1px solid $border;
+            border-radius: 5px;
+            background-color: $oc-white;
+            box-shadow: 0 2px 4px $border;
+            .form__input {
+                margin: 0;
+                padding: 30px 30px 0;
+            }
+            .form__input ~ .form__input { padding-top: 20px; }
+            .divider {
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-top: 0;
+                padding-bottom: 20px;
+                border: 0;
+                border-bottom: 1px dashed $border;
+                box-shadow: 0 2px 4px $oc-gray-0;
+            }
+            .btn.btn--primary {
+                width: 100%;
+                margin-top: 30px;
+                padding: 13px 16px 14px;
+                border-radius: 0 0 $border-radius $border-radius;
+                font-size: 14px;
+            }
+        }
+    }
+    // 담당자 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .manager-info {
+        max-width: 900px;
+        width: 100%;
+        margin-top: 40px;
+        .left {
+            min-width: 180px;
+            .title { margin-top: 20px; }
+        }
+        .right {
+            margin-left: 100px;
+            .manager {
+                border: 1px solid $border;
+                border-radius: 5px;
+                background-color: $oc-white;
+                box-shadow: 0 2px 4px $border;
+                .component__header {
+                    border: none;
+                    transition: 0.2s ease-out;
+                    cursor: pointer;
+                    &:hover { background-color: $oc-gray-0; }
+                    .arrow {
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border: 0 solid $oc-gray-9;
+                        border-width: 0 0 2px 2px;
+                        transform: rotate(-45deg);
+                        transition: 0.2s ease-out;
+                    }
+                }
+                .component__content { display: none; }
+                .btn.btn-outline--danger {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+            .manager ~ .btn.btn-outline--primary {
+                width: 100%;
+                margin-top: 20px;
+                border-style: dashed;
+            }
+            // 담당자 정보 -- 클릭해서 열었을 때
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .manager.manager--open {
+                .component__header {
+                    border-bottom: 1px dashed $border;
+                    .arrow { transform: translateY(8px) rotate(135deg); }
+                }
+                .component__content { display: block; }
+            }
+        }
+    }
+    // 회사 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .company-info {
+        max-width: 900px;
+        width: 100%;
+        margin-top: 40px;
+        .left {
+            min-width: 180px;
+            .title { margin-top: 20px; }
+        }
+        .right {
+            margin-left: 100px;
+            .company {
+                border: 1px solid $border;
+                border-radius: 5px;
+                background-color: $oc-white;
+                box-shadow: 0 2px 4px $border;
+                .component__header {
+                    border: none;
+                    transition: 0.2s ease-out;
+                    cursor: pointer;
+                    &:hover { background-color: $oc-gray-0; }
+                    .arrow {
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border: 0 solid $oc-gray-9;
+                        border-width: 0 0 2px 2px;
+                        transform: rotate(-45deg);
+                        transition: 0.2s ease-out;
+                    }
+                }
+                .component__content { display: none; }
+                .business-field {
+                    margin-top: 15px;
+                    .title {
+                        font-weight: 700;
+                        font-size: 14px;
+                        .required { color: $oc-red-7; }
+                    }
+                    .select-field {
+                        margin-top: 10px;
+                        .btn.btn-outline--secondary {
+                            position: relative;
+                            padding-right: 32px;
+                            text-align: left;
+                            &:after {
+                                position: absolute;
+                                z-index: 1;
+                                top: 44%;
+                                right: 16px;
+                                display: inline-block;
+                                width: 6px;
+                                height: 6px;
+                                border: solid #212729;
+                                border-width: 0 0 1px 1px;
+                                transform: translateY(-50%) rotate(-45deg);
+                                content: "";
+                            }
+                            .field__item-wrap {
+                                z-index: 1;
+                                position: absolute;
+                                overflow: auto;
+                                display: none;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                max-height: 200px;
+                                margin-top: 6px;
+                                padding: 10px 0;
+                                border: 1px solid $oc-gray-3;
+                                border-radius: $border-radius;
+                                background-color: white;
+                                @include shadow;
+                                .field__item {
+                                    padding: 5px 15px;
+                                    font-weight: 500;
+                                    transition: 0.2s ease-out;
+                                    &:hover { background-color: $oc-gray-1; }
+                                }
+                                .field__item.see-more {
+                                    margin: 10px;
+                                    margin-bottom: 0;
+                                    border: 1px solid $border;
+                                    border-radius: $border-radius;
+                                    text-align: center;
+                                }
+                              .field__item.hidden {display: none}
+                            }
+                            .field__item-wrap.show { display: block; }
+
+                        }
+                        .btn ~ .btn { margin-left: 10px; }
+                    }
+                    .btn-wrap {
+                        .btn {
+                            width: 100%;
+                            margin-top: 12px;
+                            border-style: dashed;
+                        }
+                    }
+                }
+            }
+            // 회사 정보 -- 클릭해서 열었을 때
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .company.company--open {
+                .component__header {
+                    border-bottom: 1px dashed $border;
+                    .arrow { transform: translateY(8px) rotate(135deg); }
+                }
+                .component__content { display: block; }
+            }
+            .btn.btn--primary {
+                width: 100%;
+                margin-top: 20px;
+                padding: 13px 16px 14px;
+                font-size: 14px;
+            }
+        }
+    }
+    section ~ section { margin-top: 40px; }
+}
+
+@media (max-width: $mobile-max-width) {
+    .register {
+        padding: 80px 20px 20px;
+        .register-info,
+        .manager-info,
+        .company-info {
+            display: block;
+            .left {
+                .title { margin: 0; }
+            }
+            .right {
+                margin: 0;
+                margin-top: 20px;
+            }
+        }
+        .register-info {
+            .right {
+                .form__input {
+                    margin: 0;
+                    padding: 20px 20px 0;
+                }
+                .divider {
+                    margin-bottom: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

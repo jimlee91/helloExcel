@@ -1,0 +1,400 @@
+// 미리보기 페이지
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.sidebar.preview {
+    width: 200px;
+}
+.body-container.preview {
+    padding-left: 200px;
+}
+.preview {
+    min-height: 100vh;
+    .btn-wrap {
+        width: 1000px;
+        margin-top: 40px;
+        margin-left: 200px;
+        .btn {
+            min-width: 120px;
+            margin-left: 8px;
+        }
+    }
+    .preview-body {
+        width: 1000px;
+        margin-top: 12px;
+        margin-left: 200px;
+        margin-bottom: 20px;
+        padding: 60px;
+        //border: 1px solid $oc-gray-4;
+        background-color: white;
+        text-align: center;
+        // 기본 서식
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .section-name {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 19px;
+        }
+        .table-wrap ~ .table-wrap { margin-top: 0px; }
+        .table {
+            border-collapse: collapse;
+            .table__row {
+                .table__header,
+                .table__data {
+                    min-width: 160px;
+                    padding: 10px 15px;
+                    border: 1px solid $oc-gray-9;
+                    text-align: center;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+                .table__header {
+                    background-color: $oc-gray-2;
+                    font-weight: 600;
+                }
+                .talbe__data {}
+            }
+            .align-left { text-align: right !important; }
+            .align-right { text-align: right !important; }
+        }
+        // 문서 타입 / 문서 이름
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .document-type { letter-spacing: 0.8em; }
+        .document-name {
+            margin-top: 15px;
+        }
+        // 발신인 정보
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .sender-info {
+            margin-top: 70px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid $oc-gray-4;
+            text-align: left;
+            .title {
+                color: $oc-gray-5;
+                font-weight: 700;
+            }
+            .row {
+                z-index: 1;
+                position: relative;
+                margin-top: 12px;
+                .content {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                .content ~ .content { margin-left: 20px; }
+            }
+            // 발신인 회사 정보
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .company-info {
+                .row {
+                    // 도장
+                    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+                    .stamp-wrap {
+                        z-index: 1;
+                        position: relative;
+                        display: inline-block;
+                        margin-left: 20px;
+                        .stamp {
+                            z-index: -1;
+                            position: absolute;
+                            right: -75px;
+                            bottom: -5px;
+                            max-width: 70px;
+                            max-height: 70px;
+                        }
+                    }
+                }
+            }
+            // 발신인 담당자 정보
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .manager-info {
+                margin-top: 40px;
+                .row {
+                    .content ~ .content { margin-left: 35px; }
+                }
+            }
+            // 문서 정보
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .document-info {
+                min-width: 350px;
+                .row { margin-top: 10px; }
+                .title {
+                    min-width: 180px;
+                    text-align: right;
+                }
+                .content {
+                    margin-left: 30px;
+                    line-height: 1.55em;
+                }
+            }
+            // 로고
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .logo-wrap {
+                margin-top: 50px;
+                .logo {
+                    max-width: 280px;
+                    max-height: 110px;
+                }
+            }
+        }
+        // 수신인 정보
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .receiver-info {
+            margin-top: 50px;
+            text-align: left;
+            .title {
+                color: $oc-gray-5;
+                font-weight: 700;
+            }
+            .row {
+                z-index: 1;
+                position: relative;
+                margin-top: 12px;
+                .content {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                .content ~ .content { margin-left: 20px; }
+            }
+            // 수신인 회사 정보
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .company-info {}
+            // 수신인 담당자 정보
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .manager-info {
+                margin-top: 40px;
+                .row {
+                    .content ~ .content { margin-left: 35px; }
+                }
+            }
+            // 문서 정보
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .document-info {
+                min-width: 350px;
+                .row { margin-top: 0px; }
+                .title {
+                    min-width: 180px;
+                    text-align: right;
+                }
+                .form__input.with-btn {
+                    margin-left: 20px;
+                    .input__text {
+                        margin-top: 0;
+                    }
+                    .btn {
+                        margin-top: 0;
+                        background-color: $primary;
+                    }
+                }
+            }
+            // 최종 금액
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .total-price {
+                min-width: 350px;
+                margin-top: 30px;
+                .title-wrap {
+                    text-align: right;
+                    .title {
+                        margin-bottom: 10px;
+                        color: $primary;
+                    }
+                    .description {
+                        color: $primary;
+                        font-weight: 700;
+                        font-size: 15px;
+                    }
+                }
+                .amount-wrap {
+                    margin-left: 50px;
+                    .default-amount {
+                        text-align: right;
+                        text-decoration: line-through;
+                    }
+                    .discount-amount {
+                        font-weight: 700;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        // 견적 내용
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .table-wrap {
+            overflow: auto;
+            margin-top: 40px;
+            .table {
+                width: 100%;
+                .table__row {
+                    .table__header {
+                        border-bottom: 3px double;
+                    }
+                }
+                .total__title { border: 1px solid !important; }
+            }
+        }
+        // 합계 금액
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .total {
+            margin-top: 15px;
+            .table {
+                width: 100%;
+                .table__row {
+                    .table__header,
+                    .table__data {
+                        font-weight: 700;
+                    }
+                }
+                .table__row:first-child {
+                    .table__data {
+                        border: none !important;
+                    }
+                }
+            }
+        }
+        // 견적부가정보
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .document-add-on {
+            margin-top: 45px;
+            text-align: left;
+            .title {
+                color: $oc-gray-5;
+                font-weight: 700;
+            }
+            .content {
+                font-weight: 600;
+                font-size: 16px;
+            }
+            .row ~ .row { margin-top: 25px; }
+            .add-on {
+                margin-top: 40px !important;
+                padding: 20px 20px 14px;
+                border: 1px solid $border;
+                .title-wrap {
+                    padding: 0 15px;
+                    padding-bottom: 8px;
+                    .title { color: $oc-gray-9; }
+                }
+                .item-wrap {
+                    margin-left: 25px;
+                    .item {
+                        display: inline-block;
+                        min-height: 34px;
+                        margin-right: 4px;
+                        margin-bottom: 6px;
+                        padding: 6px 12px;
+                        border: 1px solid $border;
+                        border-radius: $border-radius;
+                        font-size: 15px;
+                        background-color: $oc-gray-0;
+                        transition: 0.2s ease-out;
+                        cursor: pointer;
+                        &:hover { background-color: $oc-gray-1; }
+                        i { margin-right: 7px; }
+                    }
+                }
+            }
+        }
+        // 안내사항
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .document-advice {
+            margin-top: 35px;
+            .title { color: $oc-gray-9; }
+            .checkbox-wrapper {
+                .checkbox__icon {
+                    position: relative;
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 8px;
+                    margin-bottom: -4px;
+                    border: 1px solid $border;
+                    border-radius: $border-radius;
+                    &:before {
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        display: inline-block;
+                        width: 11px;
+                        height: 5px;
+                        border: solid $border;
+                        border-width: 0 0 2px 2px;
+                        transform: rotate(-45deg);
+                        content: '';
+                    }
+                }
+                .checkbox { display: none; }
+                .checkbox[type=checkbox]:checked+label .checkbox__icon {
+                    border-color: $primary;
+                    background-color: $primary;
+                    &:before { border-color: white; }
+                }
+                .confirmed {
+                    margin-left: 8px;
+                    color: $primary;
+                }
+            }
+            .advice {
+                margin-top: 15px;
+                padding: 20px 25px;
+                border: 1px solid $border;
+                line-height: 1.55em;
+                font-weight: 500;
+                font-size: 15px;
+                background-color: $oc-gray-0;
+            }
+        }
+        // 결제정보확인 버튼
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .payment-info-btn {
+            width: auto;
+            margin: 0;
+            margin-top: 30px;
+            .btn {
+                min-width: 250px;
+                font-size: 17px;
+            }
+            .info__item {
+                padding: 20px;
+                border: 1px solid $border;
+                .title-wrap {
+                    min-width: 130px;
+                    padding: 0 15px;
+                    .title { color: $oc-gray-9; }
+                }
+                .content-wrap {
+                    margin-left: 25px;
+                    .content {
+                        color: $primary;
+                        font-weight: 700;
+                        font-size: 23px;
+                        border: none;
+                        &::placeholder { color: $oc-gray-4; }
+                    }
+                    .btn {
+                        min-width: auto;
+                        margin: 0;
+                        i { margin-right: 10px; }
+                    }
+                    .btn ~ .btn { margin-left: 15px; }
+                }
+            }
+            .info__item ~ .info__item { margin-top: 20px; }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .preview-html {
+        min-width: 1080px;
+        .sidebar.preview { display: none; }
+        .preview {
+            .btn-wrap {
+                margin-left: 0;
+            }
+            .preview-body {
+                margin-left: 0;
+            }
+        }
+    }
+}

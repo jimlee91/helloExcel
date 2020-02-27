@@ -1,0 +1,54 @@
+// 거래처관리 페이지
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.customer {
+    .customer-list {
+        padding: 20px 30px 30px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        // 검색창
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .input--search {
+            position: relative;
+            width: 350px;
+            font-size: 14px;
+            &:before {
+                position: absolute;
+                top: 49%;
+                left: 15px;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 300;
+                font-size: 16px;
+                transform: translate(0, -50%);
+                content: "\f002";
+            }
+            .input__text {
+                padding: 10px 16px 11px 42px;
+                margin: 0;
+            }
+            .btn { margin: 0; }
+        }
+        // 테이블
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .table-wrap { overflow: auto; }
+        .list--table { margin-top: 30px; }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .customer {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        .customer-list {
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            .input--search {
+                width: 100%;
+                .input__text { border-radius: $border-radius; }
+                .btn { display: none; }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+// 신규발행 - 발송하기
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.new-send {
+    .send-form {
+        max-width: 600px;
+        width: 100%;
+        margin-top: 20px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        .share {
+            width: 100%;
+            margin-top: 20px;
+            i { margin-right: 10px; }
+        }
+        .divider {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-bottom: 1px dashed $oc-gray-4;
+        }
+        .form__textarea { margin-top: 20px; }
+        .btn--add {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .new-send {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        .send-form {
+            margin: -10px;
+            border: none;
+            box-shadow: none;
+            .component__header {
+                padding: 0;
+            }
+            .component__content {
+                padding: 0;
+            }
+        }
+    }
+}

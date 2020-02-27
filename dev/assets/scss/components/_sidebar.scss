@@ -1,0 +1,118 @@
+// 사이드메뉴
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.sidebar {
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    padding: 20px 0;
+    overflow-y: auto;
+    border-right: 1px solid $border;
+    background-color: $oc-white;
+    .sidebar__menu {
+        .menu__item {
+            .menu__link {
+                display: inline-block;
+                width: 100%;
+                padding: 20px 30px;
+                color: $oc-gray-6;
+                transition: 0.2s ease-out;
+                &:hover { background-color: $oc-gray-1; }
+                .nav__logo {
+                    display: inline-block;
+                    width: 70px;
+                    height: 20px;
+                }
+            }
+            i {
+                display: inline-block;
+                min-width: 16px;
+                margin-right: 24px;
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+        .menu__item--active {
+            .menu__link {
+                background-color: $oc-gray-0;
+                color: $oc-gray-9;
+            }
+        }
+        .divider {
+            border: 0;
+            border-bottom: 1px solid $border;
+        }
+    }
+}
+@media (max-width: $mobile-max-width) {
+    .sidebar { display: none; }
+}
+
+// 사이드 메뉴 있을 때, container 생성
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.body-container {
+    min-height: 100vh;
+    padding-left: 260px;
+    .body-wrap {
+        padding: 20px 20px 40px;
+        .content-container {
+            max-width: $container-width;
+            width: 100%;
+            .page-header {
+                padding-bottom: 15px;
+                border-bottom: 1px solid $border;
+                .title {}
+                // btn 사이즈 조절 및 primary 색상 버튼 좌측 마진
+                .btn { min-width: 120px; }
+                .btn.btn--primary { margin-left: 10px; }
+                .btn.btn-outline--primary  ~ .btn.btn-outline--primary { margin-left: 10px; }
+                .btn.btn-outline--danger { border-style: dashed; }
+            }
+            .page-description {
+                margin-top: 8px;
+                .description {
+                    color: $oc-gray-6;
+                    font-size: 12px;
+                }
+                .breadcrumb {
+                    color: $oc-blue-6;
+                    font-size: 15px;
+                  padding: 0px;
+                  background: none;
+
+                }
+                .breadcrumb:last-child {
+                    border: none;
+                    color: $oc-gray-6;
+                }
+                .breadcrumb ~ .breadcrumb {
+                    &:before {
+                        display: inline-block;
+                        padding-right: .5rem;
+                        padding-left: .5rem;
+                        color: $oc-gray-5;
+                        content: "/";
+                    }
+                }
+            }
+            .row { margin-top: 20px; }
+        }
+    }
+}
+@media (max-width: $mobile-max-width) {
+    .body-container {
+        padding: 0;
+        .body-wrap {
+            .content-container {
+                width: 100%;
+                .page-header {
+                    border-bottom: none;
+                    .title { font-weight: 400; }
+                    .btn-wrap { display: none; }
+                }
+                .row { margin: 0; }
+            }
+        }
+    }
+}

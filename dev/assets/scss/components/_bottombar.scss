@@ -1,0 +1,21 @@
+.bottombar {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    height: 70px;
+    padding: 0 25px;
+    border-top: 1px solid $border;
+    background-color: $oc-white;
+    .btn-wrap {
+        .btn { width: 100%; }
+        .btn ~ .btn { margin-left: 3%; }
+        .btn.btn-outline--danger { border-style: dashed; }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .bottombar { display: flex; }
+}

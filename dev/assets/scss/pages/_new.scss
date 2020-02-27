@@ -1,0 +1,527 @@
+// 신규발행 페이지
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.new {
+    .m-0 { margin: 0;}
+    .document-info {
+        padding: 25px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        .load-btn-wrap {
+            padding-bottom: 20px;
+            border-bottom: 1px dashed $border;
+            .btn { min-width: 160px; }
+            .btn ~ .btn { margin-left: 15px; }
+        }
+      .load-btn-wrap .title{
+        font-size: 18px;
+        text-align: center;
+      }
+        .add-memo {
+            width: 100%;
+            margin-top: 25px;
+        }
+    }
+    // 견적서 입력부분
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .document-section {
+        .section__header {
+            border-bottom: 2px solid $oc-gray-9;
+            .input__text {
+                margin: 0;
+                padding-left: 0;
+                font-weight: 700;
+                border: none;
+                background-color: transparent;
+                font-size: 15px;
+            }
+        }
+        .form__select.add-tax {
+            //max-width: 360px;
+            .select { background-color: white; }
+        }
+        .add-table__header {
+            margin-top: 15px;
+            overflow: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            &::-webkit-scrollbar { display: none; }
+            .title {
+                padding: 0 20px;
+                font-weight: 700;
+                font-size: 13px;
+            }
+            .header-item {
+                padding: 8px 12px 9px;
+                margin-right: 10px;
+                border: 1px dashed $primary;
+                border-radius: $border-radius;
+                background-color: white;
+                color: $primary;
+                font-weight: 700;
+                font-size: 12px;
+                cursor: pointer;
+                &:hover { background-color: $primary; color: white ; border: 1px dashed white;}
+                @include shadow;
+            }
+        }
+      .switch-wrap {
+        z-index: 1;
+        position: relative;
+        float: right;
+        margin: 18px 20px 0px 0px;
+        &:before {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          width: 130px;
+          height: 31px;
+          border: 1px solid $border;
+          border-radius: $border-radius;
+          content: '';
+        }
+
+        .switch {
+          display: none;
+        }
+        .switch__label {
+          padding: 5px 20px;
+          background: transparent;
+          color: $oc-gray-5;
+        }
+        .switch__label.active {
+          color: $primary;
+          border-color: $primary;
+        }
+      }
+        // 견적서 표 입력
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .table-wrap {
+            margin-top: 15px;
+            overflow: auto;
+            .table {
+                border-collapse: collapse;
+                .table__row {
+                    // 테이블 기본 스타일
+                    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+                    .table__header,
+                    .table__data {
+                        min-width: 160px;
+                        border: 1px solid $border;
+                        border-bottom: none;
+                        font-size: 14px;
+                        .select-wrap {
+                            display: none;
+                            &:after {
+                                top: 9px;
+                                right: 12px;
+                            }
+                            .select {
+                                margin-top: 0;
+                                padding: 3px 9px 4px;
+                                background-color: white;
+                                font-size: 13px;
+                            }
+                        }
+                        .btn--text.btn--danger {
+                            display: none;
+                            min-width: 30px;
+                            margin-left: 3px;
+                            margin-right: -5px;
+                            font-size: 16px;
+                        }
+                    }
+                    .table__header { background-color: $oc-gray-0; }
+                    .table__data {
+                        position: relative;
+                        background-color: white;
+                        .input__text {
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                        }
+                    }
+                    .table__data.align-right {
+                        text-align: right;
+                        .input__text { text-align: right; }
+                    }
+                    .table__header:last-child,
+                    .table__data:last-child { border-right: 0; }
+                    // 첫번째 열 전용스타일
+                    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+                    .table__header.first,
+                    .table__data.first {
+                        padding: 8px 10px;
+                        border-left: 0;
+                        min-width: auto;
+                        .btn.change-status {
+                            padding: 3px 9px 4px;
+                            border: 1px solid $oc-gray-9;
+                            background-color: transparent;
+                            font-size: 11px;
+                        }
+                        .btn--text.btn--danger {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                    .table__header.FC0009 {width: auto; min-width: 70px; padding: 12px 10px;}
+                  .table__data.FC0009 {width: auto; min-width: 70px}
+                  .table__header.FC0010 {min-width: 100px;}
+                  .table__data.FC0010 {min-width: 100px}
+                }
+                // 테이블 내 합계
+                // ––––––––––––––––––––––––––––––––––––––––––––––––––
+                .table__row.table__total {
+                    .total__title { text-align: center; }
+                    .table__data {
+                        padding: 15px;
+                        border-top: 1px solid $oc-gray-9;
+                        border-bottom: 1px solid $border;
+                        font-weight: 700;
+                    }
+                }
+            }
+            // 테이블 편집하기
+            // ––––––––––––––––––––––––––––––––––––––––––––––––––
+            .table.edit {
+                .table__row {
+                    .table__header,
+                    .table__data {
+                        .title { display: none; }
+                        .select-wrap { display: inline-block; }
+                        .btn--text.btn--danger { display: inline-block; }
+                    }
+                    .table__header { padding: 8px 10px; }
+                    .table__header.first,
+                    .table__data.first {
+                        .btn.change-status {
+                            border: 0;
+                            color: white;
+                            background-color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+        // 테이블 소계
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .table__summary {
+            //border-bottom: 1px solid $border;
+            //background-color: white;
+          .table__summary-div{
+            display: flex;padding: 5px 15px 5px 0px;
+          }
+          .table__summary-border{
+            border-bottom: 1px solid #dee2e6;
+          }
+            .row {
+                margin-top: 0;
+              line-height: initial;
+                .summary__item { padding: 14px 20px 15px; }
+                .summary__item:last-child {
+                    position: relative;
+                    font-weight: 700;
+                    &:before {
+                        position: absolute;
+                        top: 50%;
+                        left: -8%;
+                        display: inline-block;
+                        width: 1px;
+                        height: 22px;
+                        background-color: $border;
+                        transform: translateY(-50%);
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+    .document-section ~ .document-section { margin-top: 30px; }
+    .btn.btn-outline--primary.add-section {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 100%;
+        border-style: dashed;
+        font-size: 14px;
+    }
+    // 견적서 전체 섹션 합계
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .document-section__total {
+        overflow: hidden;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        .total__content {
+            padding: 30px 30px 35px;
+            .title-wrap {
+                padding-bottom: 15px;
+                border-bottom: 1px solid $border;
+                .title { font-weight: 700; }
+            }
+            .total__row {
+                margin-top: 25px;
+                .subtitle {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+                .content {
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+            }
+        }
+        .total__final {
+            padding: 30px 30px 40px;
+            color: white;
+            background-color: $primary;
+            .title {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 1em;
+            }
+            .content {
+                font-weight: 700;
+                line-height: 0.8em;
+            }
+        }
+    }
+    // 견적 부가 정보 / 첨부 파일 업로드 스타일링
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .add-on {
+        margin-top: 20px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        .component__header {
+            border: none;
+            transition: 0.2s ease-out;
+            cursor: pointer;
+            &:hover { background-color: $oc-gray-0; }
+            .title {
+                font-weight: 700;
+                font-size: 16px;
+            }
+            .tag { margin-right: 20px; }
+            .arrow {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 0 solid $oc-gray-9;
+                border-width: 0 0 2px 2px;
+                transform: rotate(-45deg);
+                transition: 0.2s ease-out;
+            }
+        }
+        .component__content {
+            display: none;
+            .btn-wrap {
+                .btn { font-size: 14px; }
+                .btn.btn-outline--primary { border-style: dashed; }
+                .add-file {
+                    i { margin-right: 8px; }
+                }
+                .btn ~ .btn { margin-left: 3%; }
+            }
+            .add-on__item {
+                margin-top: 20px;
+                padding: 15px 20px 20px;
+                border: 1px solid $border;
+                border-radius: $border-radius;
+                .item__header {
+                    .input__text {
+                        margin-top: 0;
+                        padding: 0;
+                        border: none;
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+                    .btn.btn--danger { font-size: 17px; }
+                }
+            }
+            .file__item {
+                margin-top: 20px;
+                padding: 10px 20px;
+                border: 1px solid $border;
+                border-radius: $border-radius;
+                background-color: $oc-gray-0;
+                .file__name {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    width: 100%;
+                    max-height: 1.5em;
+                    color: $oc-gray-6;
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-overflow: ellipsis;
+                    line-height: 1.5em;
+                    word-wrap: break-all;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+                .btn.btn--danger { font-size: 17px; }
+            }
+            .checkbox-wrapper {
+                .checkbox__icon {
+                    position: relative;
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 8px;
+                    margin-bottom: -4px;
+                    border: 1px solid $border;
+                    border-radius: $border-radius;
+                    &:before {
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        display: inline-block;
+                        width: 11px;
+                        height: 5px;
+                        border: solid $border;
+                        border-width: 0 0 2px 2px;
+                        transform: rotate(-45deg);
+                        content: '';
+                    }
+                }
+                .checkbox { display: none; }
+                .checkbox[type=checkbox]:checked+label .checkbox__icon {
+                    border-color: $primary;
+                    background-color: $primary;
+                    &:before { border-color: white; }
+                }
+            }
+        }
+    }
+    .add-on.add-on--open {
+        .component__header {
+            border-bottom: 1px dashed $border;
+            .arrow { transform: translateY(8px) rotate(135deg); }
+        }
+        .component__content { display: block; }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .new {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        .mt-20 { margin-top: 20px; }
+        .six.columns ~ .six.columns { margin-top: 20px; }
+        .document-info {
+            position: relative;
+            padding: 0;
+            //padding-bottom: 25px;
+          padding-top: 20px;
+            border: none;
+            box-shadow: none;
+            &:before {
+                position: absolute;
+                bottom: 0;
+                left: -20px;
+                display: inline-block;
+                width: 100vw;
+                height: 1px;
+                border-top: 2px solid $oc-gray-2;
+                content: '';
+            }
+            .load-btn-wrap {
+                overflow: hidden;
+                border-bottom: 0;
+                .btn { float: left; width: 48.5%; }
+                .btn ~ .btn { margin-left: 3%; }
+            }
+            .form__input {}
+        }
+        .document-section {
+            margin-top: 25px;
+            .form__select.add-tax { max-width: 100%; }
+            .table-wrap {
+                scrollbar-width: none;
+                &::-webkit-scrollbar { display: none; }
+            }
+            .add-table__header {
+                .title { padding-left: 10px; }
+            }
+            .table__summary {
+                margin-top: 10px;
+                //padding: 20px;
+                //border: 1px solid $border;
+                border-radius: $border-radius;
+                .table__summary-div{
+
+                }
+              .table__summary-border{
+                border-bottom: 1px dashed #dee2e6;
+              }
+              .table__summary-div .table__summary-border-title{
+                text-align: left;
+                color: black;
+              }
+                .row {
+                    .summary__item {
+                        padding: 0;
+                        font-weight: 400;
+                        font-size: 15px;
+                        .title {
+                            color: $oc-gray-7;
+                        }
+                    }
+                    .summary__item ~ .summary__item { margin-top: 20px; }
+                    .summary__item:last-child {
+                        margin-top: 40px;
+                        &:before {
+                            top: -20px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            border-top: 1px dashed $oc-gray-4;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .document-section__total {
+            margin-bottom: 10px;
+            border: none;
+            box-shadow: none;
+            .total__content {
+                padding: 0;
+                .title-wrap {
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $oc-gray-9;;
+                    .title { font-size: 16px; }
+                }
+                .total__row {
+                    margin-top: 0;
+                    padding: 15px 0;
+                    border-bottom: 1px solid $border;
+                    .subtitle { font-size: 15px; }
+                    .content { font-size: 15px; }
+                }
+                .total__row:last-child { border: none; }
+            }
+            .total__final {
+                padding: 20px 20px 22px;
+                border: 1px solid $primary;
+                border-radius: $border-radius;
+                background-color: rgba(21, 170, 191, 0.05);
+                .title {
+                    color: $primary;
+                    font-size: 17px;
+                    line-height: 1em;
+                }
+                .content {
+                    color: $primary;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

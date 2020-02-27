@@ -1,0 +1,193 @@
+// 사용자정보 페이지
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.user {
+    .company-info,
+    .payment-info,
+    .manager-info,
+    .account-info {
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+    }
+
+    // 회사 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .company-info {
+        .business-field {
+            margin-top: 15px;
+            .title {
+                font-weight: 700;
+                font-size: 14px;
+                .required { color: $oc-red-7; }
+            }
+            .select-field {
+                margin-top: 10px;
+                .btn.btn-outline--secondary {
+                    position: relative;
+                    padding-right: 32px;
+                    text-align: left;
+                    &:after {
+                        position: absolute;
+                        z-index: 1;
+                        top: 44%;
+                        right: 16px;
+                        display: inline-block;
+                        width: 6px;
+                        height: 6px;
+                        border: solid #212729;
+                        border-width: 0 0 1px 1px;
+                        transform: translateY(-50%) rotate(-45deg);
+                        content: "";
+                    }
+                    .field__item-wrap {
+                        z-index: 1;
+                        position: absolute;
+                        overflow: auto;
+                        display: none;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        max-height: 200px;
+                        margin-top: 6px;
+                        padding: 10px 0;
+                        border: 1px solid $oc-gray-3;
+                        border-radius: $border-radius;
+                        background-color: white;
+                        @include shadow;
+                        .field__item {
+                            padding: 5px 15px;
+                            font-weight: 500;
+                            transition: 0.2s ease-out;
+                            &:hover { background-color: $oc-gray-1; }
+                        }
+                        .field__item.see-more {
+                            margin: 10px;
+                            margin-bottom: 0;
+                            border: 1px solid $border;
+                            border-radius: $border-radius;
+                            text-align: center;
+                        }
+                    }
+                    .field__item-wrap.show { display: block; }
+                }
+                .btn ~ .btn { margin-left: 10px; }
+            }
+            .btn-wrap {
+                .btn {
+                    width: 100%;
+                    margin-top: 12px;
+                    border-style: dashed;
+                }
+            }
+        }
+    }
+ 
+    // 결제 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .payment-info {
+        margin-top: 20px;
+        .btn.btn--text { margin-top: 8px; }
+        .form__input {
+            .btn.btn-outline--secondary {
+                width: 100%;
+                margin-top: 10px;
+                border-style: dashed;
+                background-color: $oc-gray-0;
+            }
+        }
+    }
+    // 계좌 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .account-info {
+        margin-top: 20px;
+        .form__mixed {
+            .bank-name {
+                padding: 13px 12px 11px;
+                border: 1px solid $oc-gray-4;
+                border-radius: $border-radius 0 0 $border-radius;
+                font-weight: 500;
+                font-size: 14px;
+                background-color: $oc-gray-0;
+            }
+            .input__text {
+                border: 1px solid $oc-gray-4;
+                border-left: 0;
+                border-radius: 0 $border-radius $border-radius 0;
+            }
+        }
+        .select-account {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .btn.btn-outline--secondary {
+            width: 100%;
+            border-style: dashed;
+        }
+    }
+    // 비밀번호 변경
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .change-pw {
+        width: 100%;
+        margin-top: 20px;
+        font-weight: 500;
+        background-color: $oc-gray-0;
+        &:hover { background-color: $oc-gray-1; }
+    }
+    // 담당자 정보
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .manager-info {
+        .component__header {
+            border: none; 
+            transition: 0.2s ease-out;
+            cursor: pointer;
+            &:hover { background-color: $oc-gray-0; }
+            .arrow {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: 0 solid $oc-gray-9;
+                border-width: 0 0 2px 2px;
+                transform: rotate(-45deg);
+                transition: 0.2s ease-out;
+            }
+        }
+        .component__content { display: none; }
+        .btn.btn-outline--danger {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .manager-info ~ .btn.btn-outline--primary {
+        width: 100%;
+        margin-top: 20px;
+        border-style: dashed;
+    }
+    // 담당자 정보 -- 클릭해서 열었을 때
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––
+    .manager-info.manager-info--open {
+        .component__header {
+            border-bottom: 1px dashed $border;
+            .arrow { transform: translateY(8px) rotate(135deg); }
+        }
+        .component__content { display: block; }
+    }
+}
+
+@media (max-width: 1200px) {
+    .user {
+        .manager-info-wrap.show-mobile {
+            display: block !important;
+            margin-top: 20px;
+        }
+        .six.columns { width: 100%; }
+        .six.columns.show-pc { display: none; }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .user {
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,134 @@
+// 발송리스트 페이지
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.sendlist {
+    .sendlist-stastastics {
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        .stastastics__item {
+            padding: 25px 30px;
+            .title {
+                color: $oc-gray-6;
+                font-weight: 600;
+                font-size: 15px;
+            }
+            .content-wrap {
+                .content {
+                    margin-top: 5px;
+                }
+                .change-value {
+                    margin-left: 5px;
+                    margin-bottom: 5px;
+                    font-weight: 700;
+                    color: $oc-gray-6;
+                }
+                .change-value.increase {
+                    color: $primary;
+                }
+                .change-value.decrease {
+                    color: $oc-red-7;
+                }
+            }
+        }
+        .btn-wrap {
+            padding: 25px 30px;
+        }
+    }
+    .sendlist-list {
+        padding: 20px 30px 30px;
+        border: 1px solid $border;
+        border-radius: $border-radius;
+        background-color: white;
+        @include shadow;
+        // 검색창
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .input--search {
+            position: relative;
+            width: 350px;
+            font-size: 14px;
+            &:before {
+                position: absolute;
+                top: 49%;
+                left: 15px;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 300;
+                font-size: 16px;
+                transform: translate(0, -50%);
+                content: "\f002";
+            }
+            .input__text {
+                padding: 10px 16px 11px 42px;
+                margin: 0;
+            }
+            .btn { margin: 0; }
+        }
+        // 필터
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .filter-wrap { margin-left: 15px; }
+        // 테이블
+        // ––––––––––––––––––––––––––––––––––––––––––––––––––
+        .table-wrap { overflow: auto; }
+        .list--table { margin-top: 30px; }
+    }
+}
+
+@media (max-width: 1200px) {
+    .sendlist {
+        .sl-statastics.show-pc { display: none; }
+        .sl-statastics.show-mobile { display: block !important; }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .sendlist {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        .sl-statastics { margin-bottom: 20px !important; }
+        .sendlist-stastastics {
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+            .stastastics__item {
+                padding: 15px 20px;
+                border: 1px solid $border;
+                border-radius: $border-radius;
+                background-color: white;
+                @include shadow;
+                .title { font-size: 13px; }
+                .content-wrap {
+                    .content {
+                        margin-top: 5px;
+                        font-weight: 700;
+                        font-size: 23px;
+                    }
+                    .change-value {
+                        margin-left: 5px;
+                        margin-bottom: 5px;
+                        font-weight: 700;
+                        color: $oc-gray-6;
+                    }
+                }
+            }
+            .stastastics__item ~ .stastastics__item { margin-left: 20px; }
+            .stastastics__item ~ .btn-wrap { margin-left: 20px; }
+            .btn-wrap {
+                margin: auto;
+                padding: 15px 20px;
+                .btn { padding: 12px 16px 13px; }
+            }
+            .stastastics-row ~ .stastastics-row { margin-top: 20px; }
+        }
+        .sendlist-list {
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            .input--search {
+                width: 100%;
+                margin-bottom: 10px;
+                .input__text { border-radius: $border-radius; }
+                .btn { display: none; }
+            }
+        }
+    }
+}
