@@ -114,5 +114,5 @@ exports.default = gulp.series(
 );
 
 exports.build = gulp.series(
-    clean, html, css, js, minImg, json
+    clean, html, scss, js, minImg, json
 );
