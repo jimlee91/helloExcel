@@ -45,7 +45,7 @@ const css = () => {
     return gulp.src("dev/assets/css/**/*.css")
         // .pipe(cssnano())
         .pipe(postcss([ autoprefixer ]))
-        .pipe(concat("main.css"))
+        // .pipe(concat("main.css"))
         .pipe(gulp.dest("dist/assets/css/"))
 };
 
@@ -91,8 +91,10 @@ const json = () => {
 const watchTask = () => {
     gulp.watch('dev/**/*.html', html)
         .on('change', browserSync.reload);
-    gulp.watch('dev/**/*.css', css)
-        .on('change', browserSync.reload);
+        gulp.watch('dev/**/*.css', css)
+            .on('change', browserSync.reload);
+            gulp.watch('dev/**/*.scss', scss)
+                .on('change', browserSync.reload);
     gulp.watch('dev/**/*.js', js)
         .on('change', browserSync.reload);
     gulp.watch('dev/**/*.json', json)

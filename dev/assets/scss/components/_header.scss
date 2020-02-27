@@ -1,0 +1,136 @@
+.header{
+    background:$primary;
+    position: fixed;
+    z-index: 1000;;
+    left: 0;
+    top: 0;
+    width: 100%;
+    .wrap {
+        padding:0 30px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        max-width: 1440px;
+        margin:0 auto;
+    }
+}
+.header__logo {
+    width: 79px;
+    height: 27px;
+    background:#fff;
+    margin-right: 150px;
+    a {
+        font-size: 14px;
+    }
+}
+
+.header__back{
+    background:#fff;
+    opacity: .3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin-right: 25px;
+} 
+
+.header__userInfo {
+    display: flex;
+    align-items: center;
+    & > img {
+        margin-right: 40px;
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        color:#fff;
+    }
+    .company {
+        width: 130px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .userName {
+        width: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        opacity: .5;
+    }
+}
+
+
+.common-bg {
+    background:#454a50;
+    min-height: 100vh;
+    padding-top: 90px;
+    padding: 90px 15px 40px;
+    @media screen and (max-width: $cont-width) {
+        padding: 70px 15px 20px;
+    }
+}
+
+.common-header {
+    .title {
+        border-bottom: 1px solid #ced4da;
+        width: 100%;
+        max-width: 770px;
+        h1 {
+            font-size: 50px;
+            line-height: 75px;
+            font-weight: 700;
+        }
+    }   
+    .description {
+        line-height: 27px;
+        font-size: 18px;
+        color:#909ca8;
+        margin-top: 10px;
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}
+.select.common select{
+    height: 40px;
+    border: 1px solid #dee2e6;
+    appearance: none;
+    padding:0 16px;
+    font-size: 14px;
+    width: 100%;
+    background: url('../images/path.png') #fff no-repeat calc(100% - 16px) center;
+    color:#343A40;
+    transition:all .3s;
+    color:#343A40;
+    border-radius: 3px;
+    overflow: hidden;
+    &:hover {
+        background: url('../images/path.png') #F1F3F5 no-repeat calc(100% - 16px) center;
+    }
+}
+.input.common {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    overflow: hidden;
+    input {
+        height: 40px;
+        border: 1px solid #dee2e6;
+        appearance: none;
+        padding:0 16px;
+        font-size: 14px;
+        width: 100%;
+        color:#343A40;
+        flex: 1;
+    }
+    button {
+        flex: none;
+        height: 40px;
+        background:#dee2e6;
+        width: 60px;
+    }
+}

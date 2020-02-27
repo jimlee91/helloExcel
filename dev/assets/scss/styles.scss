@@ -1,4 +1,10 @@
 
+$container-width: 940px;
+$border-radius: 5px;
+$mobile-max-width: 800px;
+
+$cont-width: 1440px;
+$mobile-width: 1000px;
 
 // SASS Import
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -44,6 +50,9 @@
 @import 'pages/stastastics';
 @import 'pages/findpass';
 @import 'pages/email-verify';
+
+@import 'components/header';
+@import 'pages/tradeHistory';
 @media (max-width: $mobile-max-width) {}
 
 // 기본 background-color 설정

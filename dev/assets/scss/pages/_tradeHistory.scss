@@ -1,0 +1,392 @@
+.tradeHistory {
+    // 예외
+    @media screen and (max-width: $mobile-width) {
+        .common-header {
+            .title {
+                max-width: 100%;
+                h1 {
+                    line-height: 50px;
+                    background:#fff;
+                    font-size: 18px;
+                    padding:0 20px;
+                }
+            }   
+            .description {
+                display: none;
+            }
+        }
+    }
+
+
+    .container {
+        background:#fff;
+        padding: 60px;
+        @media screen and (max-width: $mobile-width) {
+            padding: 0;
+
+            .container__body {
+                background:#f8f9fa;
+                padding: 15px 8px;
+            }
+        }
+    }
+    .total {
+        margin-top: 60px;
+        padding:0 200px 15px;
+        border-bottom: 2px dashed #dee2e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: $cont-width) {
+            padding:0 100px 15px;
+        }
+        @media screen and (max-width: $mobile-width) {
+            display: none;
+        }
+
+        .col {
+            text-align: right;
+            &:nth-child(2) {
+                margin-right: 80px;
+                margin-left: auto;
+            }
+        }
+        .total__title {
+            color:#909ca8;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 23px;
+            color:#343a40;
+            line-height: 34px;
+        }
+
+    }
+
+    .form {
+        margin-top: 30px;
+        @media screen and (max-width: $mobile-width) {
+            margin: 0;   
+        }
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: $mobile-width) {
+            flex-direction: column;
+            align-items: flex-start;
+            &:before {
+                content:'세금계산서 발행';
+                color:#909ca8;
+                font-size: 14px;
+                padding:0 1em;
+                margin-bottom: 5px;
+                line-height: 20px;
+            }
+        }
+        .select {
+            width: 150px;
+            margin-right: 15px;
+            @media screen and (max-width: $mobile-width) {
+                margin-bottom: 10px;
+            }
+        }
+        .input {
+            width: 100%;
+            max-width: 340px;
+            input::placeholder {
+                color:#ced4da;
+            }
+        }
+    }
+}
+
+.tradeHistory__table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 15px;
+    border-top: 2px solid #909ca8;
+    @media screen and (max-width: $mobile-width) {
+        display: block;
+        margin-top: 10px;
+        border: none;
+    }
+    .column-group {
+        display: table-column-group;
+        @media screen and (max-width: $mobile-width) {
+            display: none;
+        }
+        .column-cell{
+            display: table-column;
+            &.col-1{width: 100px;}
+            &.col-2{}
+            &.col-3{width: 130px;}
+            &.col-4{width: 100px;}
+            &.col-5{width: 110px;}
+            &.col-6{width: 250px;}
+        }
+    }
+    .table-thead {
+        display: table-header-group;
+        @media screen and (max-width: $mobile-width) {
+            display: none;
+        }
+        .table-cell {
+            border-bottom: 2px solid #909ca8;
+            color:#909ca8;
+        }
+    }
+    .table-tbody {
+        display: table-row-group;
+        @media screen and (max-width: $mobile-width) {
+            display: block;
+        }
+    }
+    .table-row {
+        display: table-row;
+        transition: all .3s;
+        &:hover {
+            background:#f1f3f5;
+        }
+        @media screen and (max-width: $mobile-width) {
+            display: flex;
+            flex-direction: column;
+            background:#fff;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.16);
+            margin-bottom: 10px;
+            padding:20px 18px;
+            position: relative;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+        border-bottom: 1px solid #dee2e6;
+        height: 55px;
+        color:#343a40;
+        @media screen and (max-width: $mobile-width) {
+            display: block;
+            border: none;
+            height: auto;
+
+            &:nth-child(1){
+                // state
+                order: 1;
+                position: absolute;
+                left: 18px;
+                top: 50px;
+                z-index: 1;;
+            }
+            &:nth-child(2){
+                // title
+                order: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;;
+                margin-bottom: 5px;
+                &:before {
+                    content: '세금계산서';
+                    color:#909ca8;
+                }
+                .row-title {
+                    text-align: right;
+                    margin-left: 20px;
+                }
+            }
+            &:nth-child(3){
+                // price
+                order: 2;
+                .row-price {
+                    line-height: 33px;
+                    display: block;
+                    padding-left: 80px;
+                    font-size: 22px;
+                }
+            }
+            &:nth-child(4){
+                // date
+                order: 3;
+                width: 45%;
+                flex: none;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                height: 30px;
+                span {
+                    color:#343a40;
+                }
+                &:before {
+                    content:'발행일자';
+                    font-size: 12px;
+                    color:#909ca8;
+                    margin-right: 10px;
+                }
+            }
+            &:nth-child(5){
+                // code
+                order: 4;
+                width: calc(55% - 18px);
+                flex: none;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;;
+                height: 30px;
+                position: absolute;
+                right: 18px;
+                top: 83px;
+                z-index: 1;;
+                span {
+                    color:#343a40;
+                }
+                &:before {
+                    content:'발신인 관리번호';
+                    font-size: 12px;
+                    color:#909ca8;
+                    margin-right: 10px;
+                }
+            }
+            &:nth-child(6){
+                // 다운로드
+                order: 5;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                .row-items {
+                    padding: 0;
+
+                    .download {
+                        margin-left: 10px;
+                    }
+                }
+                &:before {
+                    content:'비용증빙자료';
+                    font-size: 12px;
+                    color:#909ca8;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .text-left {text-align: left;}
+    .text-right {text-align: right;}
+    .text-center {text-align: center;}
+
+    .state {
+        width: 63px;
+        line-height: 24px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.16);
+        display: inline-block;
+        font-size: 12px;
+
+        &.incomplete {
+            color:#fa5956;
+        }
+        &.complete {
+            color:#8967bc;
+        }
+    }
+    .row-title {
+        font-size: 14px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .row-price {
+        font-size: 16px;
+    }
+    .row-code,
+    .row-date {
+        font-size: 14px;
+        color:#909ca8;
+    }
+    .row-items {
+        display: flex;
+        align-items: center;
+        padding-right: 25px;
+        font-size: 14px;
+        color:#343a40;
+        font-weight: 300;
+        text-decoration: underline;        
+        .download {
+            width: 14px;
+            height: 16px;
+            background:#8967bc;
+            margin-left: auto;
+            text-indent: -9999px;
+            overflow: hidden;;
+        }
+    }
+}
+
+.tradeHistory__footer {
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;;
+
+    @media screen and (max-width: $mobile-width) {
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        flex: none;
+    }
+    .tradeHistory__footer-content {
+        margin-left: 40px;
+        flex: 1;
+        @media screen and (max-width: $mobile-width) {
+            margin-left: 0;
+            margin-top: 30px;
+            width: 100%;
+        }
+        .row-top {
+            text-align: right;
+            h3 {
+                font-size: 23px;
+                color:#343a40;
+                line-height: 34px;
+            }
+            p {
+                font-size: 14px;
+                color:#343a40;
+                line-height: 20px;
+                margin-top: 5px;
+            }
+        }
+
+        .row-bottom {
+            margin: 10px 0;
+            padding: 10px;
+            border-top: 1px solid #ced4da;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-size: 13px;
+                color:#909ca8;
+                line-height: 20px;
+
+                span {
+                    width: 100px;
+                    flex: none;
+                }
+            }
+        }
+    }
+}
