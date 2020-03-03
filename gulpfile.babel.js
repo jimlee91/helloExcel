@@ -50,13 +50,23 @@ const css = () => {
 };
 
 const scss = () => {
-    return gulp.src("dev/assets/scss/**/*.scss")
-        .pipe(plumber())
+    return gulp
+        .src("dev/assets/scss/**/*.scss")
+        .pipe(
+            plumber({
+                errorHandler: function(err) {
+                    notify.onError({
+                        title: "Gulp error in " + err.plugin,
+                        message: err.toString()
+                    })(err);
+                }
+            })
+        )
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: ''}))
+        .pipe(sass({ outputStyle: "" }).on("error", sass.logError))
         .pipe(postcss([autoprefixer]))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest("dist/assets/css"))
+        .pipe(gulp.dest("dist/assets/css"));
 };
 
 const plugin = () => {
