@@ -183,14 +183,33 @@ select::-ms-expand {
         background:#fff;
         border-radius: 2em;
         padding:5px 0;
+        transition: all .3s;
         &:last-child {
             margin-right: 0;
+        }
+        &:hover {
+            background:#e2fbff;
+        }
+        &.save span {
+            background: url('../images/icon-save.png') no-repeat left center;
+            background-size: auto 24px;
+        }
+        &.pass span {
+            background: url('../images/icon-pass.png') no-repeat left center;
+            background-size: auto 22px;
+        }
+        &.bill span {
+            background: url('../images/icon-bill.png') no-repeat left center;
+            background-size: auto 25px;
         }
         span {
             padding-left: 40px;
             text-align: center;
             font-size: 14px;
             line-height: 15px;
+            height: 30px;
+            display: flex;
+            align-items: center;
             color:#343a40;
         }
     }
