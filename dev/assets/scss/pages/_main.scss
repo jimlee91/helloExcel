@@ -3,6 +3,9 @@
     padding-top: 90px;
   }
   @media screen and (max-width: 1030px) {
+    &.common-bg {
+      padding-top: 70px;
+    }
     .estimate {
       display: none;
     }
@@ -31,6 +34,7 @@
     }
     @media screen and (max-width: 768px) {
       flex-direction: column;
+      margin-top: 20px;
     }
   }
   .main__content {

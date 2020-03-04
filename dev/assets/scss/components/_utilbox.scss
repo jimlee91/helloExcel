@@ -42,7 +42,9 @@
   .utilbox__content {
     overflow: hidden;
     height: 0px;
-    transition: all .5s;
+    @media screen and (min-width: 768px) {
+      transition: all .5s;
+    }
 
     .hr {
       width: 100%;
@@ -62,9 +64,24 @@
     }
   }
   &.js-active {
+
     .utilbox__content {
       overflow: auto;
       height: 350px;
+    }
+
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      left: 0;
+      top: 50px;
+      height: calc(100vh - 50px);
+      z-index: 1000;
+      border-radius: 0;
+
+      .utilbox__content {
+        overflow: auto;
+        height: calc(100% - 45px);
+      }
     }
   }
   .utilbox__history {
