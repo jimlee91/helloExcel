@@ -80,7 +80,7 @@
 
       .utilbox__content {
         overflow: auto;
-        height: calc(100% - 45px);
+        height: calc(100vh - 95px);
       }
     }
   }
@@ -136,15 +136,15 @@
   .utilbox__talk {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex-wrap: wrap;
+    height:calc(100vh - 95px);
     form {
-      margin-top: auto;
       width: 100%;
     }
     .utilbox__talk-list {
       padding: 20px;
-      flex: 1;
       overflow: auto;
+      height: calc(100% - 45px);
     }
     .utilbox__talk-item {
       margin-bottom: 15px;
@@ -214,6 +214,10 @@
         color:#909ca8;
       }
     }
+  }
+  .utilbox__chat-form {
+    flex: none;
+    height: 45px;
   }
   .utilbox__chat {
     height: 45px;
