@@ -4,7 +4,48 @@
   border-radius: 5px;
   box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.16);
   border: 1px solid #dee2e6;
-
+  position: relative;
+  .mobileEstimate__marks {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .mark {
+      margin-right: 5px;
+      width: 50px;
+      height: 75px;
+      padding: 5px;
+      background:#8967bc;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      p {
+        color:#fff;
+        font-size: 10px;text-align: center;
+        line-height: 10px;
+        height: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+      .icon {
+        width: 40px;
+        height: 40px;
+        background:#fff;
+        border-radius: 50%;
+      }
+    }
+  }
+  .mobileEstimate__logo {
+    text-align: center;
+    img {
+      max-height: 70px;
+    }
+  }
   .mobileEstimate__showbtn {
     border-top: 1px solid #dee2e6;
     height: 70px;
@@ -18,6 +59,27 @@
       background:url('../images/refresh.png') no-repeat left center;
       background-size: auto 20px;
       padding-left: 30px;
+    }
+  }
+  .mobileEstimate__description {
+    font-size: 14px;
+    line-height: 20px;
+    word-break: keep-all;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .mobileEstimate__price {
+    text-align: center;
+    margin-top: 35px;
+    span {
+      font-size: 14px;
+      color:#909ca8;
+      line-height: 20px;
+    }
+    h2 {
+      font-size: 30px;
+      line-height:  45px;
     }
   }
 }

@@ -118,11 +118,21 @@
   padding: 50px;
   background:#fff;
   border-radius: 5px;
+  position: relative;
+  @media screen and (max-width: 1030px) {
+    padding: 50px 20%;
+  }
 
   .payment-result__title {
     font-size: 35px;
     line-height: 52px;
     text-align: center;
+    @media screen and (max-width: 1030px) {
+      text-align: right;
+      padding-right: 150px;
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
   .payment-reulst__desc {
     font-size: 20px;
@@ -130,6 +140,12 @@
     margin-top: 5px;
     color:#909ca8;
     text-align: center;
+    @media screen and (max-width: 1030px) {
+      text-align: right;
+      padding-right: 150px;
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
   .payment-result__info {
@@ -138,9 +154,21 @@
     align-items: center;
     justify-content: center;
     margin-top: 25px;
-
+    .img {
+      @media screen and (max-width: 1030px) {
+        position: absolute;
+        z-index: 1;
+        right:20%;
+        top: 50px;
+        width: 130px;
+      }
+    }
     .info {
       margin-left: 65px;
+      @media screen and (max-width: 1030px) {
+        padding-right: 150px;
+        margin-left: 0;
+      }
       li {
         display: flex;
         justify-content: flex-start;
@@ -179,6 +207,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 1030px) {
+      margin-top: 50px;
+    }
 
     a {
       line-height: 50px;
@@ -190,6 +221,10 @@
       margin:0 10px;
       font-size: 18px;
       transition: all .3s;
+      @media screen and (max-width: 1030px) {
+        flex: 1;
+        width: auto;
+      }
       &:hover {
         background:#e2fbff;
       }
