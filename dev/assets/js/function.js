@@ -26,6 +26,11 @@ document.querySelectorAll('.payment__item').forEach((el) => {
 // 변경이력 및 채팅 헤더 클릭시 토글
 document.querySelectorAll('.utilbox__header button').forEach((el) => {
     el.addEventListener('click', function(){
+        if( document.body.style.overflow != 'hidden' ) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
         this.closest('.utilbox').classList.toggle('js-active');
     })
 });
