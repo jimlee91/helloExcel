@@ -1,4 +1,8 @@
 .mobileEstimate {
+  display: none !important;
+  @media screen and (max-width: 1030px) {
+    display: block !important;
+  }
   background: #fff;
   padding: 30px 30px 0;
   border-radius: 5px;

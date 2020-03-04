@@ -56,6 +56,11 @@
       width: 50px;
       margin:0 auto;
       margin-bottom: 20px;
+      &:hover {
+        span {
+          background:#e2fbff;
+        }
+      }
     }
     span {
       width: 50px;
@@ -66,6 +71,7 @@
       justify-content: center;
       border-radius: 50%;
       margin-bottom: 2px;
+      transition: all .3s;
     }
     p {
       text-align: center;

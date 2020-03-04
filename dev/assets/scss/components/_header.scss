@@ -6,7 +6,7 @@
     top: 0;
     width: 100%;
     .wrap {
-        padding:0 30px;
+        padding:0 0;
         height: 50px;
         display: flex;
         align-items: center;
@@ -182,13 +182,15 @@ select::-ms-expand {
         margin-right: 15px;
         background:#fff;
         border-radius: 2em;
+        padding:5px 0;
         &:last-child {
             margin-right: 0;
         }
         span {
+            padding-left: 40px;
             text-align: center;
             font-size: 14px;
-            line-height: 20px;
+            line-height: 15px;
             color:#343a40;
         }
     }
