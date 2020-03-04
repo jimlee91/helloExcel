@@ -1,3 +1,5 @@
+
+
 .main {
   &.common-bg {
     padding-top: 90px;
@@ -24,6 +26,13 @@
   .main__Info {
     width: 256px;
     flex: none;
+
+    position:fixed;
+    right: 50%;
+    top: 90px;
+    z-index: 10;
+    margin-right: -720px;
+
     @media screen and (max-width: 1470px) {
       width: 100%;
       margin-top: 70px;
@@ -31,6 +40,8 @@
       align-items: flex-start;
       flex-wrap: wrap;
       justify-content: space-between;
+      position: static;
+      margin-right: 0;
     }
     @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -38,18 +49,28 @@
     }
   }
   .main__content {
+    margin-left: 105px;
     margin-right: 20px;
     flex: 1;
+    max-width: 1060px;
     @media screen and (max-width: 1470px) {
       margin: 0;
+      max-width: 100%;
     }
 
   }
   .main__util {
+    position:fixed;
+    left: 50%;
+    top: 90px;
+    z-index: 10;
+    margin-left: -720px;
     width: 105px;
     flex: none;
     @media screen and (max-width: 1470px) {
       display: none;
+      position: static;
+      margin-right: 0;
     }
     a {
       display: block;
