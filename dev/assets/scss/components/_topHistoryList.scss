@@ -5,6 +5,9 @@
   width: 100%;
   top: 50px;
   left: 0;
+  @media screen and (max-width: 1030px) {
+    display: none !important;
+  }
   &.js-show {
     height: calc(100vh - 50px);
     .topHistoryList__bg{

@@ -11,3 +11,13 @@ document.querySelector('.topHistoryList__toggle').addEventListener('click', func
     e.preventDefault();
     document.querySelector('.topHistoryList').classList.toggle('js-show');
 });
+
+// 모바일에서 결제방법 선택 슬라이드
+document.querySelectorAll('.payment__item').forEach((el) => {
+    el.addEventListener('click', function(){
+        // disabled 클래스가 있으면 토글 불가능
+        if( !this.classList.contains('disabled') ) {
+            this.classList.toggle('js-active');
+        }
+    })
+})
