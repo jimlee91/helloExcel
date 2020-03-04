@@ -1,1 +1,305 @@
-계약서 팝업
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+<style>
+    .dim{position:fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 1000;background:rgba(0,0,0,0.2);}
+</style>
+<div class="dim">
+    <img src="" alt="">
+</div>
+<div style="width: 1000px;margin:0 auto;">
+    <div class="estimate">
+        <header class="estimate__header">
+            <div class="estimate__logo">
+                <img src="https://via.placeholder.com/120x120" alt="">
+            </div>
+            <div class="estimate__marks">
+                <!-- 마크 -->
+                <span class="mark">
+                            <img src="./assets/images/mark1.png" alt="">
+                            <p>2020.07.11</p>
+                        </span>
+                <span class="mark">
+                            <img src="./assets/images/mark1.png" alt="">
+                            <p>2020.07.11</p>
+                        </span>
+            </div>
+            <div class="estimate__header-top">
+                <h1>견적서</h1>
+                <div class="estimate__date">
+                    <span>발행일자 2019.10.31</span>
+                    <span>유효기간 2019.10.31</span>
+                </div>
+            </div>
+            <div class="estimate__header-bottom">
+                <p>2019년 ㅁㅁ사 ERP 및 그룹웨어 개발관련 제안</p>
+                <p>2019년 ㅁㅁ사 ERP 및 그룹웨어 개발관련 제안2222</p>
+            </div>
+        </header>
+        <div class="estimate__userInfo">
+            <div class="sender estimate__user">
+                <h2>발신인</h2>
+
+                <div class="depth">
+                    <p class="estimate__number">NO. 1221244-1</p>
+                    <h3>
+                        (주) 모스인 큐브
+                        <button class="estimate__user-more">더보기</button>
+                    </h3>
+
+                    <div class="depth js-innerToggle">
+                        <div class="row">
+                            <h4>회사정보</h4>
+                            <span class="estimate__user-sign">
+                                        <img src="https://via.placeholder.com/60x60" alt="">
+                                    </span>
+                            <ul>
+                                <li>대표 홍길동</li>
+                                <li>102-112-223333</li>
+                                <li>11020-121223</li>
+                                <li>031-484-4344</li>
+                                <li>quee7018@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <h4>담당자</h4>
+                            <span class="estimate__user-sign">
+                                        <img src="https://via.placeholder.com/60x60" alt="">
+                                    </span>
+                            <ul>
+                                <li>대표 홍길동</li>
+                                <li>031-484-4344</li>
+                                <li>quee7018@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <h4>담당자</h4>
+                            <span class="estimate__user-sign">
+                                        <img src="https://via.placeholder.com/60x60" alt="">
+                                    </span>
+                            <ul>
+                                <li>대표 홍길동</li>
+                                <li>031-484-4344</li>
+                                <li>quee7018@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="receiver estimate__user">
+                <h2>수신인</h2>
+                <div class="depth">
+                    <div class="estimate__number">
+                        NO.
+                        <form action="" class="codeForm">
+                            <input type="text" placeholder="관리번호를 입력하세요.">
+                            <button>저장</button>
+                        </form>
+                    </div>
+                    <h3>
+                        (주) 모스인 큐브
+                        <button class="estimate__user-more">더보기</button>
+                    </h3>
+
+                    <div class="depth js-innerToggle">
+                        <div class="row">
+                            <h4>회사정보</h4>
+                            <ul>
+                                <li>대표 홍길동</li>
+                                <li>102-112-223333</li>
+                                <li>11020-121223</li>
+                                <li>031-484-4344</li>
+                                <li>quee7018@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <h4>담당자</h4>
+                            <ul>
+                                <li>대표 홍길동</li>
+                                <li>031-484-4344</li>
+                                <li>quee7018@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <h4>담당자</h4>
+                            <ul>
+                                <li>대표 홍길동</li>
+                                <li>031-484-4344</li>
+                                <li>quee7018@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="estimate__price">
+            <div class="row">
+                <h3 class="table__title">뭐시기 견적의 제목</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col class="estimate__price-col1">
+                            <col class="estimate__price-col2">
+                            <col class="estimate__price-col3">
+                            <col class="estimate__price-col4">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="center">날짜</th>
+                            <th>품목</th>
+                            <th class="right">단가</th>
+                            <th class="right">금액</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="center">2020.02.07</td>
+                            <td>선행기술조사 분석에 대ㅇ러ㅏ넝</td>
+                            <td class="right">100,000,000</td>
+                            <td class="right">100,000,000</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <ul>
+                                    <li><strong>금액</strong> 60,000 원</li>
+                                    <li><strong>부가세</strong> 60,000 원</li>
+                                    <li><strong>소계</strong> 100,060,000원</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <h3 class="table__title">뭐시기 견적의 제목</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col class="estimate__price-col1">
+                            <col class="estimate__price-col2">
+                            <col class="estimate__price-col3">
+                            <col class="estimate__price-col4">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="center">날짜</th>
+                            <th>품목</th>
+                            <th class="right">단가</th>
+                            <th class="right">금액</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="center">2020.02.07</td>
+                            <td>선행기술조사 분석에 대ㅇ러ㅏ넝</td>
+                            <td class="right">100,000,000</td>
+                            <td class="right">100,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="center">2020.02.07</td>
+                            <td>선행기술조사 분석에 대ㅇ러ㅏ넝선행기술조사 분석에 대ㅇ러ㅏ넝선행기술조사 분석에 대ㅇ러ㅏ넝</td>
+                            <td class="right">100,000,000</td>
+                            <td class="right">100,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="center">2020.02.07</td>
+                            <td>선행기술조사 분석에 대ㅇ러ㅏ넝</td>
+                            <td class="right">100,000,000</td>
+                            <td class="right">100,000,000</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <ul>
+                                    <li><strong>금액</strong> 60,000 원</li>
+                                    <li><strong>부가세</strong> 60,000 원</li>
+                                    <li><strong>소계</strong> 100,060,000원</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="estimate__price-total">
+            <ul>
+                <li>
+                    <strong>전체 합계</strong> 10,000,000원
+                </li>
+                <li>
+                    <strong>부가세</strong> 10,000,000원
+                </li>
+                <li>
+                    <strong>(%) 할인 금액</strong> 10,000,000원
+                </li>
+                <li>
+                    <strong>최종 금액</strong> 10,000,000원
+                </li>
+            </ul>
+        </div>
+
+        <div class="estimate__info">
+            <div class="row row--short">
+                <div class="estimate__info-title">
+                    <h2>법률적 뭔가에 대한 정보</h2>
+                </div>
+                <p>
+                    2010년대에 다시 생겨난 청순 콘셉트 붐의 시류에 맞춰그러한데뷔 초에는 여타 걸그룹과 비슷한 콘셉트로 데뷔했으나 이후 끝없이
+                </p>
+            </div>
+            <div class="row row--short">
+                <div class="estimate__info-title">
+                    <h2>법률적 뭔가에 대한 정보</h2>
+                </div>
+                <p>
+                    2010년대에 다시 생겨난 청순 콘셉트 붐의 시류에 맞춰그러한데뷔 초에는 여타 걸그룹과 비슷한 콘셉트로 데뷔했으나 이후 끝없이
+                </p>
+            </div>
+            <div class="row">
+                <div class="estimate__info-title">
+                    <h2>필독사항</h2>
+                    <span class="check-date">최초 확인 일자 : 2019.10.23</span>
+                    <label for="ck" class="estimate__check">
+                        필독사항을 확인했습니다.
+                        <input type="checkbox" id="ck" hidden>
+                        <span></span>
+                    </label>
+                </div>
+                <p>
+                    2010년대에 다시 생겨난 청순 콘셉트 붐의 시류에 맞춰그러한 2010년대에 다시 생겨난 청순 콘셉트 붐의 시류에 맞춰데에는 여타 걸그룹과 비슷한 콘셉트로 데뷔했으나 이후 끝없이 다양한 콘셉트을 소화 데뷔 초에는 여타 걸그룹과 비슷한 로 데 다양한 콘셉트을 소화
+                </p>
+            </div>
+            <div class="row row--short">
+                <div class="estimate__info-title">
+                    <h2>입금계좌</h2>
+                </div>
+                <p>
+                    국민은행     169002-04-132679    예금주 : 모스인큐브
+                </p>
+            </div>
+        </div>
+
+        <div class="estimate__bankInfo">
+            <a href="" class="btn">입금 계좌번호 확인하기</a>
+        </div>
+    </div>
+</div>
+<script>
+    // 딤 터치시 닫기
+    document.querySelector('.dim').addEventListener('click', function() {
+        this.style.display = 'none';
+    })
+</script>
+</body>
+</html>
