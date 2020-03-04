@@ -178,6 +178,10 @@
 
   .estimate__price {
     margin-top: 70px;
+    .table {
+      min-width: 860px;
+      overflow-x: auto;
+    }
     .estimate__price-col1 {
       width: 100px;
     }
