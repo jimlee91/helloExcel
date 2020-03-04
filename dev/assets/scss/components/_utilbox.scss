@@ -40,14 +40,10 @@
     }
   }
   .utilbox__content {
-    overflow: auto;
-    height: 300px;
-    &.utilbox__content--chat {
-      height: 380px;
-      @media screen and (max-width: 1470px) {
-        height: 300px;
-      }
-    }
+    overflow: hidden;
+    height: 0px;
+    transition: all .5s;
+
     .hr {
       width: 100%;
       height: 1px;
@@ -63,6 +59,12 @@
         font-size: 10px;
         color:#fa5956;
       }
+    }
+  }
+  &.js-active {
+    .utilbox__content {
+      overflow: auto;
+      height: 350px;
     }
   }
   .utilbox__history {

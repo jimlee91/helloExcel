@@ -20,4 +20,13 @@ document.querySelectorAll('.payment__item').forEach((el) => {
             this.classList.toggle('js-active');
         }
     })
-})
+});
+
+
+// 변경이력 및 채팅 헤더 클릭시 토글
+document.querySelectorAll('.utilbox__header button').forEach((el) => {
+    el.addEventListener('click', function(){
+        this.closest('.utilbox').classList.toggle('js-active');
+    })
+});
+
