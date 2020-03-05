@@ -140,7 +140,22 @@
 
       @media screen and (max-width: 768px) {
         margin: 0;
-        margin-right: 25px;
+        margin-right: 15px;
+        border: none;
+        border-radius: 0;
+        width: 30px;
+        &:after {
+          display: none;
+        }
+        &.icon-1 {
+          background: url('../images/icon-dr.png') no-repeat left center;
+        }
+        &.icon-2 {
+          background: url('../images/icon-card.png') no-repeat left center;
+        }
+        &.icon-3 {
+          background: url('../images/icon-account.png') no-repeat left center;
+        }
       }
     }
     p {
