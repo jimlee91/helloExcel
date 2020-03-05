@@ -100,6 +100,12 @@
       &:last-child {
         border: none;
       }
+      &.rows--mobile {
+        display: none;
+        @media screen and (max-width: 768px) {
+          display: block;
+        }
+      }
     }
     a {
       height: 60px;
