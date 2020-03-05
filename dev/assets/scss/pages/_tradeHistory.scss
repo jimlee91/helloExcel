@@ -101,8 +101,13 @@
             }
         }
         button {
-            border: none;
             cursor: pointer;
+            text-indent: -9999px;
+            overflow: hidden;
+            background:url('../images/icon-search.png') #f1f3f5 no-repeat center;
+            border: 1px solid #dee2e6;
+            border-left: 0;
+
         }
     }
 }

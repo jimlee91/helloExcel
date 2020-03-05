@@ -88,6 +88,9 @@
     font-size: 14px;
     display: inline-block;
     margin-top: 15px;
+    background:url('../images/icon-modify.png') no-repeat left top;
+    background-size: auto .875em;
+    padding-left: 18px;
     @media screen and (max-width: 1030px) {
       position: absolute;
       right: 0;
