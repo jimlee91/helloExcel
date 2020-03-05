@@ -8,10 +8,13 @@
 </head>
 <body>
 <style>
-    .dim{position:fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 1000;background:rgba(0,0,0,0.2);}
+    .dim{position:fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 1000;background:rgba(0,0,0,0.2);display: flex;align-items: center;justify-content: center;}
+    .dim img{max-width: 50%;}
+    .back{position:fixed;right: 10px;bottom: 10px;width: 100px;height: 100px;border: none;background:#ccc;text-indent: -9999px;overflow: hidden;}
 </style>
+<button class="back" onclick="history.back();">뒤로가기</button>
 <div class="dim">
-    <img src="" alt="">
+    <img src="./assets/images/contact-info.png" alt="">
 </div>
 <div style="width: 1000px;margin:0 auto;">
     <div class="estimate">
