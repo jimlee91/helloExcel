@@ -59,6 +59,12 @@
             <div class="mobileGnb__header">
               <button class="mobileGnb__close js-close">닫기</button>
             </div>
+            <div class="mobileGnb__historylink">
+              <a href="">
+                <img src="./assets/images/icon-money.png" alt="">
+                <span>과거거래내역 보기</span>
+              </a>
+            </div>
             <nav class="mobileGnb__links">
               <div class="rows">
                 <a href="">
@@ -80,10 +86,10 @@
                 </a>
               </div>
               <div class="rows">
-                <a href="">
+                <a href="javascript:utilboxShow('#changeHistory')">
                   <span class="icon"><img src="./assets/images/icon-history.png" alt=""></span> 변경이력 보기
                 </a>
-                <a href="">
+                <a href="javascript:utilboxShow('#tradeTalk')">
                   <span class="icon"><img src="./assets/images/icon-talk.png" alt=""></span> 문의하기
                 </a>
               </div>
@@ -102,7 +108,6 @@
           </div>
         </div>
       </div>
-
       <div class="topHistoryList">
         <!-- 백그라운드 -->
         <div class="topHistoryList__bg"></div>
