@@ -35,3 +35,19 @@ document.querySelectorAll('.utilbox__header button').forEach((el) => {
     })
 });
 
+// 세금계산서, 비용증빙자료 슬라이드
+if( document.querySelectorAll('.estimateInfo').length > 0 ) {
+    document.querySelectorAll('.estimateInfo').forEach((el) => {
+        el.classList.add('js-active');
+    })
+}
+
+
+document.querySelector('.header__menu button').addEventListener('click', function(){
+    document.querySelector('.mobileGnb').classList.add('js-active')
+})
+document.querySelectorAll('.mobileGnb .js-close').forEach((el) => {
+    el.addEventListener('click', function(){
+        this.closest('.mobileGnb').classList.remove('js-active')
+    })
+})

@@ -16,6 +16,7 @@
     .topHistoryList__content {
       height: 384px;
       padding: 30px 15px;
+      border-bottom: 5px solid #22b8cf;
         .wrap {
           @media screen and (max-width: 1470px) {
             width: 100%;
@@ -24,6 +25,10 @@
         }
 
     }
+  }
+  .topHistoryList__box {
+    position: relative;
+    z-index: 2;
   }
   .topHistoryList__bg {
     opacity: 0;
@@ -45,7 +50,7 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    border-bottom: 5px solid #22b8cf;
+    border-bottom: 0px solid #22b8cf;
     background:#fff;
     .wrap {
       width: 1160px;

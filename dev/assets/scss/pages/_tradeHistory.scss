@@ -100,6 +100,10 @@
                 color:#ced4da;
             }
         }
+        button {
+            border: none;
+            cursor: pointer;
+        }
     }
 }
 
@@ -126,7 +130,7 @@
             &.col-3{width: 130px;}
             &.col-4{width: 100px;}
             &.col-5{width: 110px;}
-            &.col-6{width: 250px;}
+            &.col-6{width: 210px;}
         }
     }
     .table-thead {
@@ -325,7 +329,7 @@
         .download {
             width: 14px;
             height: 16px;
-            background:#8967bc;
+            background:url('../images/icon-download.png') no-repeat center;
             margin-left: auto;
             text-indent: -9999px;
             overflow: hidden;;

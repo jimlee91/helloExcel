@@ -1,12 +1,21 @@
 .estimateInfo {
+  height: 0;
+  padding:0 70px;
+  overflow: hidden;
   margin-bottom: 20px;
   background:#fff;
-  padding: 35px 70px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  transition: all 1.5s;
+  opacity: 0;
+  &.js-active {
+    padding: 35px 70px;
+    height: auto;
+    opacity: 1;
+  }
   @media screen and (max-width: 1030px) {
     padding: 25px 15px;
     border-radius: 3px;
@@ -92,6 +101,12 @@
   }
   .itemList {
     max-width: 300px;
+    &.itemList--bill {
+      li a {
+        background: none;
+        padding: 0;
+      }
+    }
     @media screen and (max-width: 1030px) {
       max-width: 100%;
       &.itemList--bill {
@@ -116,6 +131,8 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
+        padding-right: 35px;
+        background: url('../images/icon-download.png') no-repeat right center;
       }
       p {
         white-space: nowrap;
