@@ -360,6 +360,7 @@
     @media screen and (max-width: 768px) {
       flex-direction: column;
       margin-top: 30px;
+      display: block;
     }
 
     a {
@@ -382,6 +383,7 @@
         margin: 0;
         line-height: 40px;
         font-size: 14px;
+        display: block;
         &:last-child {
           margin-top: 5px;
         }
