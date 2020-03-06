@@ -380,10 +380,10 @@
       @media screen and (max-width: 768px) {
         flex: 1;
         width: 100%;
+        display: block;
         margin: 0;
         line-height: 40px;
         font-size: 14px;
-        display: block;
         &:last-child {
           margin-top: 5px;
         }
