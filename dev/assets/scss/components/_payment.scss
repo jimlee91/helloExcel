@@ -23,6 +23,8 @@
       margin-right: 0;
     }
     @media screen and (max-width: 768px) {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
       margin: 0;
       padding: 15px;
       max-height: 55px;
@@ -226,6 +228,7 @@
   }
   @media screen and (max-width: 768px) {
     padding: 30px 20px 20px;
+    border: 1px solid #dee2e6;
   }
 
   .payment-result__title {

@@ -24,6 +24,10 @@
     border-radius: 3px;
     flex-direction: column;
   }
+  @media screen and (max-width: 768px) {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+  }
   h2 {
     @media screen and (max-width: 1030px) {
       font-size: 18px;
@@ -70,7 +74,7 @@
     @media screen and (max-width: 1030px) {
       flex: 1;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 20px;
     }
     h3 {
       font-size: 18px;
@@ -92,7 +96,7 @@
     @media screen and (max-width: 1030px) {
       position: absolute;
       right: 0;
-      top: 0;
+      bottom: 0;
       z-index: 1;
       margin: 0;
       font-size: 12px;

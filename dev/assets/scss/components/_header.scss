@@ -126,6 +126,9 @@
   @media screen and (max-width: $cont-width) {
     padding: 70px 15px 20px;
   }
+  @media screen and (max-width: 768px) {
+    background: #f8f9fa;
+  }
 
   button {
     appearance: none;

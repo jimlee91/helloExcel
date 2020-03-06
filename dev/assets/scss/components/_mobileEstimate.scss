@@ -22,12 +22,13 @@
       width: 50px;
       height: 75px;
       padding: 5px;
-      background:#8967bc;
+      background: #8967bc;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
       p {
-        color:#fff;
-        font-size: 10px;text-align: center;
+        color: #fff;
+        font-size: 10px;
+        text-align: center;
         line-height: 10px;
         height: 20px;
         overflow: hidden;
@@ -64,12 +65,13 @@
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    color:#909ca8;
+    color: #909ca8;
     line-height: 20px;
     span {
-      background:url('../images/refresh.png') no-repeat left center;
+      background: url("../images/refresh.png") no-repeat left center;
       background-size: auto 20px;
       padding-left: 30px;
+      font-weight: 900;
     }
   }
   .mobileEstimate__description {
@@ -83,14 +85,15 @@
   .mobileEstimate__price {
     text-align: center;
     margin-top: 35px;
+    margin-bottom: 10px;
     span {
       font-size: 14px;
-      color:#909ca8;
+      color: #909ca8;
       line-height: 20px;
     }
     h2 {
       font-size: 30px;
-      line-height:  45px;
+      line-height: 45px;
     }
   }
 }

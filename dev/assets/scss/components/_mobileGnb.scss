@@ -35,8 +35,7 @@
     right: 0px;
     top: 0;
     width: 360px;
-    height: calc(100% - 50px);
-    max-height: 900px;
+    height: 100%;
     background: #fff;
     z-index: 2;
     overflow: auto;
@@ -44,10 +43,11 @@
       right: auto;
       left: 0;
       top: 50px;
+      height: calc(100% - 50px);
       width: 250px;
     }
     .utilbox--popup {
-      height: 215px;
+      height: 254px;
       padding-top: 20px;
       margin-top: auto;
       display: block;
@@ -56,6 +56,13 @@
         width: 90%;
         max-width: 290px;
         margin: 0 auto 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 218px;
+        img {
+          width: 178px;
+        }
       }
     }
   }
@@ -68,7 +75,7 @@
     .mobileGnb__close {
       width: 32px;
       height: 32px;
-      background: #ccc;
+      background: url("../images/icon-arrow.png") no-repeat center;
       border: none;
       text-indent: -9999px;
       overflow: hidden;
