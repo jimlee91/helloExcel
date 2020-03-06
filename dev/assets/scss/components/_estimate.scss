@@ -7,26 +7,26 @@
     text-align: center;
     margin-top: 60px;
     .btn {
-      color:#fff;
+      color: #fff;
       line-height: 60px;
       width: 400px;
       border-radius: 5px;
-      background:#8967bc;
-      display:block;
-      margin:0 auto;
-      font-size:24px;
+      background: #8967bc;
+      display: block;
+      margin: 0 auto;
+      font-size: 24px;
       padding: 0;
-      transition: all .3s;
+      transition: all 0.3s;
       &:hover {
-        background:#6A499B;
+        background: #6a499b;
       }
     }
   }
   .estimate__header {
-    position:relative;
+    position: relative;
     .estimate__logo {
-      position:absolute;
-      right:0;
+      position: absolute;
+      right: 0;
       top: 0;
       max-width: 120px;
       max-height: 120px;
@@ -34,8 +34,8 @@
       z-index: 10;
     }
     .estimate__marks {
-      position:absolute;
-      right:0;
+      position: absolute;
+      right: 0;
       top: 150px;
       display: flex;
       flex-wrap: wrap;
@@ -45,7 +45,7 @@
         transform: rotate(-10deg);
         margin-left: 10px;
         p {
-          color:#8967bc;
+          color: #8967bc;
           font-size: 18px;
           line-height: 1em;
           margin-top: 5px;
@@ -56,11 +56,11 @@
   }
   .estimate__header-top {
     display: flex;
-    justify-content: space-between;;
+    justify-content: space-between;
     align-items: baseline;
     width: 600px;
     flex-wrap: wrap;
-    border-bottom:1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
     h1 {
       font-size: 50px;
     }
@@ -102,7 +102,7 @@
       top: -20px;
       z-index: 20;
     }
-    .estimate__user{
+    .estimate__user {
       flex: 1;
       line-height: 20px;
       font-size: 14px;
@@ -117,8 +117,8 @@
           }
           button {
             border: none;
-            background:#909ca8;
-            color:#fff;
+            background: #909ca8;
+            color: #fff;
             border-radius: 3px;
             width: 40px;
             height: 20px;
@@ -139,20 +139,20 @@
       .estimate__user-more {
         border: none;
         font-size: 14px;
-        color:#909ca8;
+        color: #909ca8;
         margin-left: 25px;
         cursor: pointer;
         position: relative;
-        padding-right: .75em;
+        padding-right: 0.75em;
         &:after {
-          content:'';
+          content: "";
           width: 5px;
           height: 5px;
           border: 1px solid #909ca8;
-          display:block;
-          position:absolute;
-          right:0;
-          top:4px;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 4px;
           transform: rotate(45deg);
           border-width: 0px 1px 1px 0;
         }
@@ -162,20 +162,19 @@
         position: relative;
         flex-wrap: wrap;
         margin-bottom: 10px;
-        &:last-child{
+        &:last-child {
           margin-bottom: 0;
         }
         h4 {
           font-size: 14px;
           line-height: 20px;
-          margin-right:20px;
+          margin-right: 20px;
           text-align: right;
           width: 50px;
         }
       }
     }
   }
-
 
   .estimate__price {
     margin-top: 70px;
@@ -187,7 +186,6 @@
       width: 100px;
     }
     .estimate__price-col2 {
-
     }
     .estimate__price-col3 {
       width: 120px;
@@ -200,13 +198,18 @@
       &:last-child {
         margin-bottom: 0;
       }
-      .table__title {font-size: 16px;line-height: 24px;margin-bottom: 5px;}
+      .table__title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
       .table {
         table {
           border-top: 1px solid #ced4da;
           width: 100%;
         }
-        th, td {
+        th,
+        td {
           font-size: 16px;
           line-height: 1.25em;
           padding: 1em;
@@ -221,9 +224,8 @@
           }
         }
         th {
-
         }
-        tbody td{
+        tbody td {
           border-top: 1px solid #ced4da;
           height: 65px;
           vertical-align: middle;
@@ -239,9 +241,9 @@
             margin-left: 40px;
           }
           strong {
-            color:#909ca8;
+            color: #909ca8;
             margin-right: 5px;
-            display:inline-block;
+            display: inline-block;
           }
         }
       }
@@ -250,7 +252,7 @@
 
   .estimate__price-total {
     margin-top: 80px;
-    display: flex;
+    display: block;
     align-items: flex-start;
     justify-content: flex-end;
     ul {
@@ -282,7 +284,7 @@
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
-    span{
+    span {
       width: 16px;
       height: 16px;
       border-radius: 3px;
@@ -306,16 +308,16 @@
     }
     .estimate__info-title {
       border-bottom: 1px solid #ced4da;
-      padding:0 30px;
+      padding: 0 30px;
       display: flex;
       align-items: baseline;
       h2 {
         font-size: 16px;
-        line-height:24px;
+        line-height: 24px;
         margin-right: auto;
       }
       .check-date {
-        color:#fa5956;
+        color: #fa5956;
         font-size: 12px;
       }
       .estimate__check {
@@ -323,7 +325,7 @@
       }
     }
     p {
-      padding:0 60px;
+      padding: 0 60px;
       line-height: 24px;
       margin-top: 5px;
     }

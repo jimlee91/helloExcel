@@ -45,11 +45,9 @@
       cursor: pointer;
       border: 0;
       transition: all 0.3s;
-      background: url("../images/util-arrow.png") no-repeat calc(100% - 20px)
-        center;
+      background: url("../images/util-arrow.png") no-repeat 94% center;
       &:hover {
-        background: url("../images/util-arrow.png") #f1f3f5 no-repeat
-          calc(100% - 20px) center;
+        background: url("../images/util-arrow.png") #f1f3f5 no-repeat 94% center;
       }
     }
   }
