@@ -25,6 +25,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     min-height: 650px;
+    @media screen and (max-width: 768px) {
+      min-height: 100%;
+      height: auto;
+    }
   }
   .mobileGnb__content {
     position: absolute;
@@ -46,8 +50,8 @@
       height: 215px;
       padding-top: 20px;
       margin-top: auto;
-      flex: none;
       display: block;
+      flex: none;
       .utilbox__info p {
         width: 90%;
         max-width: 290px;
@@ -94,6 +98,7 @@
   }
   .mobileGnb__links {
     padding: 0 10px;
+    width: 100%;
     .rows {
       border-bottom: 1px dashed #22b8cf;
       padding: 15px 0;
