@@ -242,7 +242,10 @@
         background: #dee2e6;
         border-radius: 8px;
         flex: none;
-        max-width: calc(350px - 32px);
+        max-width: calc(100% - 32px);
+        @media screen and (max-width: 1470px) {
+          max-width: calc(100% - 32px);
+        }
         &:after {
           content: "";
           position: absolute;
