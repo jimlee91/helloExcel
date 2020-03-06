@@ -1,9 +1,9 @@
 .estimateInfo {
   height: 0;
-  padding:0 70px;
+  padding: 0 70px;
   overflow: hidden;
   margin-bottom: 20px;
-  background:#fff;
+  background: #fff;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,6 @@
     }
     strong {
       &:before {
-        content:'"';
       }
       font-size: 18px;
       font-weight: 600;
@@ -54,10 +53,9 @@
     }
     &.small {
       &:before {
-        content:'" ';
       }
       font-size: 14px;
-      color:#909ca8;
+      color: #909ca8;
     }
   }
   .estimateInfo-left {
@@ -84,12 +82,12 @@
     }
   }
   .itemList-modify {
-    color:#8967bc;
+    color: #8967bc;
     font-size: 14px;
     display: inline-block;
     margin-top: 15px;
-    background:url('../images/icon-modify.png') no-repeat left top;
-    background-size: auto .875em;
+    background: url("../images/icon-modify.png") no-repeat left top;
+    background-size: auto 0.875em;
     padding-left: 18px;
     @media screen and (max-width: 1030px) {
       position: absolute;
@@ -102,7 +100,7 @@
   }
   .itemList--file {
     a {
-      color:#8967bc !important;
+      color: #8967bc !important;
     }
   }
   .itemList {
@@ -130,7 +128,7 @@
         margin-bottom: 0;
       }
       a {
-        color:#909ca8;
+        color: #909ca8;
         font-size: 14px;
         line-height: 20px;
         display: flex;
@@ -138,7 +136,7 @@
         align-items: center;
         justify-content: flex-start;
         padding-right: 35px;
-        background: url('../images/icon-download.png') no-repeat right center;
+        background: url("../images/icon-download.png") no-repeat right center;
       }
       p {
         white-space: nowrap;
@@ -150,14 +148,14 @@
         flex: 1;
         @media screen and (max-width: 1030px) {
           font-size: 12px;
-          line-height:15px;
+          line-height: 15px;
         }
       }
       span {
         flex: none;
         @media screen and (max-width: 1030px) {
           font-size: 12px;
-          line-height:15px;
+          line-height: 15px;
         }
       }
     }

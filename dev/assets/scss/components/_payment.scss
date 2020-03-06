@@ -8,12 +8,12 @@
     flex-direction: column;
   }
 
-  .payment__item{
+  .payment__item {
     margin-right: 15px;
     padding: 30px;
     border-radius: 3px;
     overflow: hidden;
-    background:#fff;
+    background: #fff;
     flex: 1;
     display: flex;
     align-items: center;
@@ -27,14 +27,13 @@
       padding: 15px;
       max-height: 55px;
       overflow: hidden;
-      transition: all .5s;
+      transition: all 0.5s;
       & .payment__item-header {
         flex: none;
       }
-      &:nth-child(n+2){
-        margin-top:10px;
+      &:nth-child(n + 2) {
+        margin-top: 10px;
       }
-
 
       &:nth-child(1).js-active {
         max-height: 199px;
@@ -46,25 +45,28 @@
         max-height: 199px;
       }
     }
-    *{
-      color:#909ca8;
-      transition: all .3s;
+    * {
+      color: #909ca8;
+      transition: all 0.3s;
     }
     @media screen and (min-width: 768px) {
       &:hover:not(.disabled) {
-        *{
-          color:#6a499b;
+        * {
+          color: #6a499b;
         }
         .icon {
-          border-color:#6a499b;
+          border-color: #6a499b;
           &:after {
-            border-color:#6a499b;
+            border-color: #6a499b;
           }
+        }
+        .payment__btn {
+          background: #6a499b;
         }
       }
     }
     &.disabled {
-      background:#E5E5E5
+      background: #e5e5e5;
     }
 
     .payment__item-header {
@@ -80,7 +82,7 @@
     h3 {
       font-size: 24px;
       line-height: 26px;
-      color:#343a40;
+      color: #343a40;
       @media screen and (max-width: 768px) {
         text-align: center;
         font-size: 16px;
@@ -88,11 +90,11 @@
       }
     }
     h4 {
-      margin:auto 0;
+      margin: auto 0;
       font-size: 20px;
       line-height: 20px;
       text-align: center;
-      color:#343a40;
+      color: #343a40;
       @media screen and (max-width: 768px) {
         font-size: 16px;
         margin-top: 1em;
@@ -104,7 +106,7 @@
     h5 {
       font-size: 20px;
       line-height: 30px;
-      color:#909ca8;
+      color: #909ca8;
       @media screen and (max-width: 768px) {
         font-size: 12px;
         margin-top: 5px;
@@ -115,27 +117,27 @@
       }
     }
     .icon {
-      display:inline-block;
-      transition: all .3s;
+      display: inline-block;
+      transition: all 0.3s;
       width: 25px;
       height: 25px;
       border: 1px solid #909ca8;
       border-radius: 50%;
       flex: none;
       margin-bottom: 15px;
-      position:relative;
+      position: relative;
       &:after {
-        transition: all .3s;
-        position:absolute;
-        left:7px;
+        transition: all 0.3s;
+        position: absolute;
+        left: 7px;
         top: 3px;
-        content:'';
+        content: "";
         display: block;
         width: 6px;
         height: 12px;
         border: 2px solid #909ca8;
         transform: rotate(45deg);
-        border-width: 0 2px 2px 0 ;
+        border-width: 0 2px 2px 0;
       }
 
       @media screen and (max-width: 768px) {
@@ -148,13 +150,13 @@
           display: none;
         }
         &.icon-1 {
-          background: url('../images/icon-dr.png') no-repeat left center;
+          background: url("../images/icon-dr.png") no-repeat left center;
         }
         &.icon-2 {
-          background: url('../images/icon-card.png') no-repeat left center;
+          background: url("../images/icon-card.png") no-repeat left center;
         }
         &.icon-3 {
-          background: url('../images/icon-account.png') no-repeat left center;
+          background: url("../images/icon-account.png") no-repeat left center;
         }
       }
     }
@@ -163,10 +165,10 @@
       font-size: 12px;
       font-weight: 400;
       line-height: 20px;
-      color:#909ca8;
+      color: #909ca8;
       text-align: center;
       span {
-        color:#6a499b
+        color: #6a499b;
       }
 
       @media screen and (max-width: 768px) {
@@ -188,17 +190,18 @@
       cursor: pointer;
       border: none;
       line-height: 40px;
-      color:#fff !important;
+      color: #fff !important;
       border-radius: 5px;
-      background:#8967bc;
+      background: #8967bc;
       text-align: center;
       font-size: 14px;
       margin-top: 24px;
+      font-weight: 600;
       &.payment__btn--copy {
         display: none;
       }
       &:disabled {
-        background:#ced4da;
+        background: #ced4da;
       }
       @media screen and (max-width: 768px) {
         width: 100%;
@@ -215,7 +218,7 @@
 .payment-result {
   margin-top: 20px;
   padding: 50px;
-  background:#fff;
+  background: #fff;
   border-radius: 5px;
   position: relative;
   @media screen and (max-width: 1030px) {
@@ -246,7 +249,7 @@
     font-size: 20px;
     line-height: 30px;
     margin-top: 5px;
-    color:#909ca8;
+    color: #909ca8;
     text-align: center;
     @media screen and (max-width: 1030px) {
       text-align: right;
@@ -278,7 +281,7 @@
       @media screen and (max-width: 1030px) {
         position: absolute;
         z-index: 1;
-        right:20%;
+        right: 20%;
         top: 50px;
         width: 130px;
       }
@@ -311,8 +314,8 @@
         }
         strong {
           font-size: 16px;
-          color:#909ca8;
-          width: 70px;
+          color: #909ca8;
+          width: 80px;
           text-align: right;
           margin-right: 20px;
           @media screen and (max-width: 768px) {
@@ -321,7 +324,7 @@
         }
         p {
           font-size: 16px;
-          color:#909ca8;
+          color: #909ca8;
           margin: 0;
           line-height: 1em;
           font-weight: 400;
@@ -331,7 +334,7 @@
         }
         h2 {
           font-size: 24px;
-          color:#343a40;
+          color: #343a40;
           line-height: 1em;
           @media screen and (max-width: 768px) {
             font-size: 18px;
@@ -352,18 +355,19 @@
     }
     @media screen and (max-width: 768px) {
       flex-direction: column;
+      margin-top: 30px;
     }
 
     a {
       line-height: 50px;
       text-align: center;
       width: 250px;
-      color:#22b8cf;
+      color: #22b8cf;
       border: 1px solid #22b8cf;
       border-radius: 5px;
-      margin:0 10px;
+      margin: 0 10px;
       font-size: 18px;
-      transition: all .3s;
+      transition: all 0.3s;
       @media screen and (max-width: 1030px) {
         flex: 1;
         width: auto;
@@ -379,14 +383,14 @@
         }
       }
       &:hover {
-        background:#e2fbff;
+        background: #e2fbff;
       }
       &.fill {
-        background:#22b8cf;
-        color:#fff;
-        transition: all .3s;
+        background: #22b8cf;
+        color: #fff;
+        transition: all 0.3s;
         &:hover {
-          background:#15AABF;
+          background: #15aabf;
         }
       }
     }

@@ -1,297 +1,304 @@
-.header{
-    background:$primary;
-    position: fixed;
-    z-index: 6000;;
-    left: 0;
-    top: 0;
-    width: 100%;
-    .wrap {
-        padding:0 0;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        max-width: 1440px;
-        margin:0 auto;
-        @media screen and (max-width: 1470px) {
-            padding: 0 15px;
-        }
-        @media screen and (max-width: 768px) {
-            padding: 0;
-        }
-    }
-}
-.header__logo {
-    margin-right: 150px;
-    display: inline-flex;
-    align-items: center;
-    @media screen and (max-width: 1470px) {
-        margin-right: 40px;
-    }
-
-    a {
-        font-size: 14px;
-        img {
-            vertical-align: middle;
-        }
-    }
-
-    @media screen and (max-width: $mobile-width) {
-        margin-right: 100px;
-    }
-
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-}
-
-.header__back{
-    background: url('../images/icon-back.png') rgba(255,255,255,.3) no-repeat center;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    text-indent: -9999px;
-    overflow: hidden;
-    margin-right: 25px;
-
-    @media screen and (max-width: 768px) {
-        width: 50px;
-        height: 50px;
-        border-radius: 0;
-        flex: none;
-    }
-} 
-
-.header__userInfo {
+.header {
+  background: $primary;
+  position: fixed;
+  z-index: 6000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  .wrap {
+    padding: 0 0;
+    height: 50px;
     display: flex;
     align-items: center;
-    & > img {
-        margin-right: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    @media screen and (max-width: 1470px) {
+      padding: 0 15px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+}
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  @media screen and (max-width: 1470px) {
+  }
 
-        @media screen and (max-width: 1470px) {
-            margin-right: 20px;
-        }
-        @media screen and (max-width: 768px) {
-            margin-right: 0;
-            margin:0 20px;
-        }
+  a {
+    font-size: 14px;
+    img {
+      vertical-align: middle;
     }
-    .box {
-        display: flex;
-        align-items: center;
-        color:#fff;
-    }
-    .company {
-        width: 130px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        @media screen and (max-width: 1470px) {
-            width: 90px;
-        }
-        @media screen and (max-width: 768px) {
-            width: auto;
-        }
-    }
-    .userName {
-        width: 80px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        opacity: .5;
-        @media screen and (max-width: 1470px) {
-            width: 60px;
-        }
-        @media screen and (max-width: 768px) {
-            display: none;
-        }
-    }
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    margin-right: 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
+.header__back {
+  background: url("../images/icon-back.png") rgba(255, 255, 255, 0.3) no-repeat
+    center;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin-right: 25px;
+  margin-left: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    flex: none;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.header__userInfo {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
+  & > img {
+    margin-right: 40px;
+
+    @media screen and (max-width: 1470px) {
+      margin-right: 20px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin: 0 20px;
+    }
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  .company {
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media screen and (max-width: 1470px) {
+      width: 90px;
+    }
+    @media screen and (max-width: 768px) {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+  .userName {
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.5;
+    @media screen and (max-width: 1470px) {
+      width: 60px;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
 
 .common-bg {
-    background:#454a50;
-    min-height: 100vh;
-    padding-top: 90px;
-    padding: 90px 15px 40px;
-    @media screen and (max-width: $cont-width) {
-        padding: 70px 15px 20px;
-    }
+  background: #454a50;
+  min-height: 100vh;
+  padding-top: 90px;
+  padding: 90px 15px 40px;
+  @media screen and (max-width: $cont-width) {
+    padding: 70px 15px 20px;
+  }
 
-
-    button {
-        appearance: none;
-    }
+  button {
+    appearance: none;
+  }
 }
 
 .common-header {
-    .title {
-        border-bottom: 1px solid #ced4da;
-        width: 100%;
-        max-width: 770px;
-        h1 {
-            font-size: 50px;
-            line-height: 75px;
-            font-weight: 700;
-        }
-    }   
-    .description {
-        line-height: 27px;
-        font-size: 18px;
-        color:#909ca8;
-        margin-top: 10px;
+  .title {
+    border-bottom: 1px solid #ced4da;
+    width: 100%;
+    max-width: 770px;
+    h1 {
+      font-size: 50px;
+      line-height: 75px;
+      font-weight: 700;
     }
+  }
+  .description {
+    line-height: 27px;
+    font-size: 18px;
+    color: #909ca8;
+    margin-top: 10px;
+  }
 }
 
 select::-ms-expand {
-    display: none;
+  display: none;
 }
-.select.common select{
+.select.common select {
+  height: 40px;
+  border: 1px solid #dee2e6;
+  appearance: none;
+  padding: 0 16px;
+  font-size: 14px;
+  width: 100%;
+  background: url("../images/path.png") #fff no-repeat calc(100% - 16px) center;
+  color: #343a40;
+  transition: all 0.3s;
+  color: #343a40;
+  border-radius: 3px;
+  overflow: hidden;
+  &:hover {
+    background: url("../images/path.png") #f1f3f5 no-repeat calc(100% - 16px)
+      center;
+  }
+}
+.input.common {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 3px;
+  overflow: hidden;
+  input {
     height: 40px;
     border: 1px solid #dee2e6;
     appearance: none;
-    padding:0 16px;
+    padding: 0 16px;
     font-size: 14px;
     width: 100%;
-    background: url('../images/path.png') #fff no-repeat calc(100% - 16px) center;
-    color:#343A40;
-    transition:all .3s;
-    color:#343A40;
-    border-radius: 3px;
-    overflow: hidden;
-    &:hover {
-        background: url('../images/path.png') #F1F3F5 no-repeat calc(100% - 16px) center;
-    }
-}
-.input.common {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 3px;
-    overflow: hidden;
-    input {
-        height: 40px;
-        border: 1px solid #dee2e6;
-        appearance: none;
-        padding:0 16px;
-        font-size: 14px;
-        width: 100%;
-        color:#343A40;
-        flex: 1;
-    }
-    button {
-        flex: none;
-        height: 40px;
-        background:#dee2e6;
-        width: 60px;
-    }
+    color: #343a40;
+    flex: 1;
+  }
+  button {
+    flex: none;
+    height: 40px;
+    background: #dee2e6;
+    width: 60px;
+  }
 }
 .header__menu {
-    margin-left: 13px;
-    display: none !important;
-    @media screen and (max-width: 1470px) {
-        display: block !important;
-        button {
-            width: 100px;
-            height: 40px;
-            border: none;
-            cursor: pointer;
-            border-radius: 7px;
-            background:rgba(255, 255, 255, 0.25);
-            span {
-                font-size: 14px;
-                color:#fff;
-                padding-left: 25px;
-                background: url('../images/icon-header-menu.png') no-repeat left center;
-            }
-        }
+  margin-left: 13px;
+  display: none !important;
+  @media screen and (max-width: 1470px) {
+    display: block !important;
+    button {
+      width: 100px;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.25);
+      span {
+        font-size: 14px;
+        color: #fff;
+        padding-left: 25px;
+        background: url("../images/icon-header-menu.png") no-repeat left center;
+      }
     }
-    @media screen and (max-width: 1030px) {
-        margin-left: auto;
-    }
-    @media screen and (max-width: 768px) {
-        &.js-active {
-            button {
-                width: 100%;
-                height: 100%;
-                border-radius: 0;
-                background:url('../images/icon-back.png') #22b8cf no-repeat center;
-                span {
-                    display: none;
-                }
-            }
-        }
-        position:absolute;
-        left: 0;
-        top: 0;
-        width: 50px;
-        height: 50px;
-        z-index: 20;
-        button {
-            width: 100%;
-            height: 100%;
-            border-radius: 0;
-            background:url('../images/icon-hamburger.png') #22b8cf no-repeat center;
-            span {
-                display: none;
-            }
-        }
-    }
-}
-.header__util{
+  }
+  @media screen and (max-width: 1030px) {
     margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (max-width: 1030px) {
-        display: none;
-    }
-    a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 40px;
-        margin-right: 15px;
-        background:#fff;
-        border-radius: 2em;
-        padding:5px 0;
-        transition: all .3s;
-
-        @media screen and (max-width: 1470px) {
-            width: auto;
-            padding:0 15px;
-        }
-        &:last-child {
-            margin-right: 0;
-        }
-        &:hover {
-            background:#e2fbff;
-        }
-        &.save span {
-            background: url('../images/icon-save.png') no-repeat left center;
-            background-size: auto 24px;
-        }
-        &.pass span {
-            background: url('../images/icon-pass.png') no-repeat left center;
-            background-size: auto 22px;
-        }
-        &.bill span {
-            background: url('../images/icon-bill.png') no-repeat left center;
-            background-size: auto 25px;
-        }
+  }
+  @media screen and (max-width: 768px) {
+    &.js-active {
+      button {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background: url("../images/icon-back.png") #22b8cf no-repeat center;
         span {
-            padding-left: 40px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 15px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            color:#343a40;
-            @media screen and (max-width: 1470px) {
-                padding-left: 32px;
-                font-size: 12px;
-            }
+          display: none;
         }
+      }
     }
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+    button {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      background: url("../images/icon-hamburger.png") #22b8cf no-repeat center;
+      span {
+        display: none;
+      }
+    }
+  }
+}
+.header__util {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 1030px) {
+    display: none;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    margin-right: 15px;
+    background: #fff;
+    border-radius: 2em;
+    padding: 5px 0;
+    transition: all 0.3s;
+
+    @media screen and (max-width: 1470px) {
+      width: auto;
+      padding: 0 15px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background: #e2fbff;
+    }
+    &.save span {
+      background: url("../images/icon-save.png") no-repeat left center;
+      background-size: auto 24px;
+    }
+    &.pass span {
+      background: url("../images/icon-pass.png") no-repeat left center;
+      background-size: auto 22px;
+    }
+    &.bill span {
+      background: url("../images/icon-bill.png") no-repeat left center;
+      background-size: auto 25px;
+    }
+    span {
+      padding-left: 40px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 15px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      color: #343a40;
+      @media screen and (max-width: 1470px) {
+        padding-left: 32px;
+        font-size: 12px;
+      }
+    }
+  }
 }

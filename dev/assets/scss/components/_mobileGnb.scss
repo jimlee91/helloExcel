@@ -1,4 +1,4 @@
-.mobileGnb{
+.mobileGnb {
   position: fixed;
   left: 0;
   top: 0;
@@ -13,7 +13,7 @@
     display: block;
   }
   .mobileGnb__bg {
-    position:absolute;
+    position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -33,7 +33,7 @@
     width: 360px;
     height: calc(100% - 50px);
     max-height: 900px;
-    background:#fff;
+    background: #fff;
     z-index: 2;
     overflow: auto;
     @media screen and (max-width: 768px) {
@@ -43,7 +43,7 @@
       width: 250px;
     }
     .utilbox--popup {
-      height: 224px;
+      height: 215px;
       padding-top: 20px;
       margin-top: auto;
       flex: none;
@@ -51,20 +51,20 @@
       .utilbox__info p {
         width: 90%;
         max-width: 290px;
-        margin:0 auto 20px;
+        margin: 0 auto 20px;
       }
     }
   }
   .mobileGnb__header {
     text-align: right;
-    padding:30px 30px 0;
+    padding: 30px 30px 0;
     @media screen and (max-width: 768px) {
       display: none;
     }
     .mobileGnb__close {
       width: 32px;
       height: 32px;
-      background:#ccc;
+      background: #ccc;
       border: none;
       text-indent: -9999px;
       overflow: hidden;
@@ -82,8 +82,8 @@
       align-items: center;
       justify-content: flex-start;
       padding-left: 35px;
-      color:#fff;
-      background:#22b8cf;
+      color: #fff;
+      background: #22b8cf;
       img {
         margin-right: 15px;
       }
@@ -93,10 +93,10 @@
     }
   }
   .mobileGnb__links {
-    margin-top: 10px;
-    padding:0 10px;
+    padding: 0 10px;
     .rows {
       border-bottom: 1px dashed #22b8cf;
+      padding: 15px 0;
       &:last-child {
         border: none;
       }
@@ -112,14 +112,14 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      transition: all .3s;
-      padding:0 40px;
+      transition: all 0.3s;
+      padding: 0 40px;
       font-size: 18px;
-      color:#343a40;
+      color: #343a40;
       @media screen and (max-width: 768px) {
         font-size: 14px;
         height: 45px;
-        padding:0 25px;
+        padding: 0 20px;
       }
       .icon {
         width: 45px;
@@ -132,9 +132,8 @@
         }
       }
       &:hover {
-        background:#e2fbff;
+        background: #e2fbff;
       }
     }
   }
-
 }

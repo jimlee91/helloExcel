@@ -1,5 +1,5 @@
 .topHistoryList {
-  height:0;
+  height: 0;
   position: fixed;
   z-index: 900;
   width: 100%;
@@ -10,20 +10,19 @@
   }
   &.js-show {
     height: calc(100vh - 50px);
-    .topHistoryList__bg{
+    .topHistoryList__bg {
       opacity: 1;
     }
     .topHistoryList__content {
       height: 384px;
       padding: 30px 15px;
       border-bottom: 5px solid #22b8cf;
-        .wrap {
-          @media screen and (max-width: 1470px) {
-            width: 100%;
-            max-width: 1060px;
-          }
+      .wrap {
+        @media screen and (max-width: 1470px) {
+          width: 100%;
+          max-width: 1060px;
         }
-
+      }
     }
   }
   .topHistoryList__box {
@@ -32,7 +31,7 @@
   }
   .topHistoryList__bg {
     opacity: 0;
-    transition: all .5s;
+    transition: all 0.5s;
     position: absolute;
     top: 0;
     left: 0;
@@ -43,7 +42,7 @@
   }
 
   .topHistoryList__content {
-    transition: all .5s;
+    transition: all 0.5s;
     padding: 0 15px;
     height: 0;
     overflow: hidden;
@@ -51,10 +50,10 @@
     z-index: 2;
     width: 100%;
     border-bottom: 0px solid #22b8cf;
-    background:#fff;
+    background: #fff;
     .wrap {
       width: 1160px;
-      margin:0 auto;
+      margin: 0 auto;
     }
     h2 {
       font-size: 20px;
@@ -63,17 +62,20 @@
     }
   }
   .topHistoryList__toggle {
-    background:#22b8cf;
+    background: #22b8cf;
     position: absolute;
     z-index: 5;
-    padding:0 1.5em;
+    padding: 0 1.5em;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     span {
       line-height: 25px;
       font-size: 12px;
-      color:#fff;
+      color: #fff;
+      padding-right: 1.25em;
+      background: url("../images/icon-path.png") no-repeat right center;
     }
   }
   .topHistoryList__lists {
@@ -92,12 +94,12 @@
       padding: 20px;
       flex: 1;
       max-width: 200px;
-      background:#fff;
-      transition: all .3s;
+      background: #fff;
+      transition: all 0.3s;
       display: flex;
       flex-direction: column;
       &:hover {
-        background:#f8f9fa;
+        background: #f8f9fa;
         box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.16);
       }
       &:last-child {
@@ -113,10 +115,10 @@
         p {
           text-align: center;
           font-size: 14px;
-          color:#565f68;
+          color: #565f68;
           line-height: 18px;
           margin: 0;
-          background: url('../images/arrow-right.png') no-repeat bottom center;
+          background: url("../images/arrow-right.png") no-repeat bottom center;
           padding-bottom: 1em;
         }
       }
@@ -125,7 +127,7 @@
         text-align: right;
         font-size: 14px;
         line-height: 20px;
-        color:#909ca8;
+        color: #909ca8;
         margin: 0;
       }
       .item__state {
@@ -134,7 +136,7 @@
         line-height: 26px;
         height: 24px;
         font-size: 12px;
-        padding:0 8px;
+        padding: 0 8px;
         border: 1px solid #dee2e6;
         border-radius: 5px;
         box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.16);
@@ -144,10 +146,10 @@
         margin-top: 15px;
         line-height: 20px;
         font-size: 14px;
-        color:#343a40;
+        color: #343a40;
       }
       .item__price {
-        color:#343a40;
+        color: #343a40;
         line-height: 33px;
         text-align: right;
         font-size: 22px;
@@ -157,7 +159,7 @@
       }
       .item__info-item {
         display: flex;
-        justify-content: space-between;;
+        justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 5px;
         &:last-child {
@@ -169,13 +171,13 @@
           margin: 0;
         }
         strong {
-          color:rgba(0, 0, 0, 0.3);
+          color: rgba(0, 0, 0, 0.3);
           font-size: 12px;
           line-height: 18px;
         }
         p {
           font-size: 12px;
-          color:#343a40;
+          color: #343a40;
           line-height: 18px;
         }
         .item__files {
@@ -184,6 +186,8 @@
           margin-top: 5px;
           padding-right: 25px;
           width: 100%;
+          background: url("../images/icon-download.png") no-repeat right top;
+          background-size: auto 13px;
           p {
             flex: 1;
             white-space: nowrap;
@@ -198,9 +202,6 @@
           }
         }
       }
-
-
-
     }
   }
 }

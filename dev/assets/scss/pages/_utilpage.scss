@@ -1,0 +1,19 @@
+.utilpage {
+  padding: 50px 0 0;
+  height: 100vh;
+
+  .container {
+    padding: 0;
+    height: 100%;
+  }
+
+  .utilbox__content {
+    height: calc(100% - 45px);
+    overflow: auto;
+  }
+
+  .utilbox__header button {
+    background: #fff !important;
+    font-size: 18px;
+  }
+}

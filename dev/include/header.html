@@ -8,47 +8,54 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>안녕엑셀</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-          <div class="wrap">
-            <h1 class="header__logo">
-              <a href="/">
-                <img src="./assets/images/header-logo.png" alt="안녕엑셀">
-              </a>
-            </h1>
-            <button class="header__back" onclick="history.back();">뒤로가기</button>
-            <article class="header__userInfo">
-              <div class="box box--from">
-                <span class="company">복두꺼비 농원</span>
-                <span class=userName>유철현</span>
-              </div>
-              <img src="./assets/images/invalid-name.png" alt="">
-              <div class="box box--to">
-                <span class="company">모스인 큐브</span>
-                <span class=userName>김동우</span>
-              </div>
-            </article>
+        <div class="wrap">
+          <h1 class="header__logo">
+            <a href="/">
+              <img src="./assets/images/header-logo.png" alt="안녕엑셀" />
+            </a>
+          </h1>
+          <button class="header__back" onclick="history.back();">
+            뒤로가기
+          </button>
+          <article class="header__userInfo">
+            <div class="box box--from">
+              <span class="company">복두꺼비 농원</span>
+              <span class="userName">유철현</span>
+            </div>
+            <img src="./assets/images/invalid-name.png" alt="" />
+            <div class="box box--to">
+              <span class="company">모스인 큐브</span>
+              <span class="userName">김동우</span>
+            </div>
+          </article>
 
-            <div class="header__util">
-              <a href="" class="save">
-                <span>보관하기</span>
-              </a>
-              <a href="" class="pass">
-                <span>전달하기</span>
-              </a>
-              <a href="" class="bill">
-                <span>세금계산서<br/>요청</span>
-              </a>
-            </div>
-            <div class="header__menu">
-              <button>
-                <span>더보기</span>
-              </button>
-            </div>
+          <div class="header__util">
+            <a href="" class="save">
+              <span>보관하기</span>
+            </a>
+            <a href="" class="pass">
+              <span>전달하기</span>
+            </a>
+            <a href="" class="bill">
+              <span>세금계산서<br />요청</span>
+            </a>
           </div>
+          <div class="header__menu">
+            <button>
+              <span>더보기</span>
+            </button>
+          </div>
+        </div>
       </header>
 
       <!-- 더보기 팝업 -->
@@ -61,36 +68,57 @@
             </div>
             <div class="mobileGnb__historylink">
               <a href="">
-                <img src="./assets/images/icon-money.png" alt="">
+                <img src="./assets/images/icon-money.png" alt="" />
                 <span>과거거래내역 보기</span>
               </a>
             </div>
             <nav class="mobileGnb__links">
               <div class="rows">
                 <a href="">
-                  <span class="icon"><img src="./assets/images/icon-save.png" alt=""></span> 보관하기
+                  <span class="icon"
+                    ><img src="./assets/images/icon-save.png" alt=""
+                  /></span>
+                  보관하기
                 </a>
                 <a href="">
-                  <span class="icon"><img src="./assets/images/icon-bill.png" alt=""></span> 세금계산서 요청
+                  <span class="icon"
+                    ><img src="./assets/images/icon-bill.png" alt=""
+                  /></span>
+                  세금계산서 요청
                 </a>
               </div>
               <div class="rows">
                 <a href="">
-                  <span class="icon"><img src="./assets/images/icon-pass.png" alt=""></span> 전달하기
+                  <span class="icon"
+                    ><img src="./assets/images/icon-pass.png" alt=""
+                  /></span>
+                  전달하기
                 </a>
                 <a href="">
-                  <span class="icon"><img src="./assets/images/icon-pdf.png" alt=""></span> PDF 저장하기
+                  <span class="icon"
+                    ><img src="./assets/images/icon-pdf.png" alt=""
+                  /></span>
+                  PDF 저장하기
                 </a>
                 <a href="">
-                  <span class="icon"><img src="./assets/images/icon-print.png" alt=""></span> 인쇄하기
+                  <span class="icon"
+                    ><img src="./assets/images/icon-print.png" alt=""
+                  /></span>
+                  인쇄하기
                 </a>
               </div>
               <div class="rows rows--mobile">
                 <a href="javascript:utilboxShow('#changeHistory')">
-                  <span class="icon"><img src="./assets/images/icon-history.png" alt=""></span> 변경이력 보기
+                  <span class="icon"
+                    ><img src="./assets/images/icon-history.png" alt=""
+                  /></span>
+                  변경이력 보기
                 </a>
                 <a href="javascript:utilboxShow('#tradeTalk')">
-                  <span class="icon"><img src="./assets/images/icon-talk.png" alt=""></span> 문의하기
+                  <span class="icon"
+                    ><img src="./assets/images/icon-talk.png" alt=""
+                  /></span>
+                  문의하기
                 </a>
               </div>
             </nav>
@@ -101,7 +129,7 @@
                   <a href="">더 알아보기</a>
                 </p>
                 <div class="img">
-                  <img src="./assets/images/popupimg.png" alt="">
+                  <img src="./assets/images/popupimg.png" alt="" />
                 </div>
               </div>
             </div>
@@ -128,13 +156,17 @@
                       <p>2019.01.10</p>
                     </li>
                     <li class="item__info-item">
-                      <strong>발신인<br/>관리번호</strong>
+                      <strong>발신인<br />관리번호</strong>
                       <p>a-2888399</p>
                     </li>
                     <li class="item__info-item column">
                       <strong>비용증빙자료</strong>
                       <div class="item__files">
-                        <p>가나다라마다가 사업등다가 사업등다가 사업등다가 사업등다가 사업등록증</p><span>.pdf</span> <span>외 3</span>
+                        <p>
+                          가나다라마다가 사업등다가 사업등다가 사업등다가
+                          사업등다가 사업등록증
+                        </p>
+                        <span>.pdf</span> <span>외 3</span>
                       </div>
                     </li>
                   </ul>
@@ -150,13 +182,17 @@
                       <p>2019.01.10</p>
                     </li>
                     <li class="item__info-item">
-                      <strong>발신인<br/>관리번호</strong>
+                      <strong>발신인<br />관리번호</strong>
                       <p>a-2888399</p>
                     </li>
                     <li class="item__info-item column">
                       <strong>비용증빙자료</strong>
                       <div class="item__files">
-                        <p>가나다라마다가 사업등다가 사업등다가 사업등다가 사업등다가 사업등록증</p><span>.pdf</span> <span>외 3</span>
+                        <p>
+                          가나다라마다가 사업등다가 사업등다가 사업등다가
+                          사업등다가 사업등록증
+                        </p>
+                        <span>.pdf</span> <span>외 3</span>
                       </div>
                     </li>
                   </ul>
@@ -172,13 +208,17 @@
                       <p>2019.01.10</p>
                     </li>
                     <li class="item__info-item">
-                      <strong>발신인<br/>관리번호</strong>
+                      <strong>발신인<br />관리번호</strong>
                       <p>a-2888399</p>
                     </li>
                     <li class="item__info-item column">
                       <strong>비용증빙자료</strong>
                       <div class="item__files">
-                        <p>가나다라마다가 사업등다가 사업등다가 사업등다가 사업등다가 사업등록증</p><span>.pdf</span> <span>외 3</span>
+                        <p>
+                          가나다라마다가 사업등다가 사업등다가 사업등다가
+                          사업등다가 사업등록증
+                        </p>
+                        <span>.pdf</span> <span>외 3</span>
                       </div>
                     </li>
                   </ul>
@@ -194,19 +234,26 @@
                       <p>2019.01.10</p>
                     </li>
                     <li class="item__info-item">
-                      <strong>발신인<br/>관리번호</strong>
+                      <strong>발신인<br />관리번호</strong>
                       <p>a-2888399</p>
                     </li>
                     <li class="item__info-item column">
                       <strong>비용증빙자료</strong>
                       <div class="item__files">
-                        <p>가나다라마다가 사업등다가 사업등다가 사업등다가 사업등다가 사업등록증</p><span>.pdf</span> <span>외 3</span>
+                        <p>
+                          가나다라마다가 사업등다가 사업등다가 사업등다가
+                          사업등다가 사업등록증
+                        </p>
+                        <span>.pdf</span> <span>외 3</span>
                       </div>
                     </li>
                   </ul>
                 </a>
-                <a href="" class="topHistoryList__item topHistoryList__item--more">
-                  <p>거래내역<br/>더보기</p>
+                <a
+                  href=""
+                  class="topHistoryList__item topHistoryList__item--more"
+                >
+                  <p>거래내역<br />더보기</p>
                 </a>
               </div>
             </div>
@@ -216,3 +263,6 @@
           </a>
         </div>
       </div>
+    </div>
+  </body>
+</html>
