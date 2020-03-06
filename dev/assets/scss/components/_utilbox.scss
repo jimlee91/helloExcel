@@ -49,6 +49,13 @@
       &:hover {
         background: url("../images/util-arrow.png") #f1f3f5 no-repeat 94% center;
       }
+      @media screen and (max-width: 1470px) {
+        background: url("../images/util-arrow.png") no-repeat 97% center;
+        &:hover {
+          background: url("../images/util-arrow.png") #f1f3f5 no-repeat 97%
+            center;
+        }
+      }
     }
   }
   .eachUtilshow {
@@ -216,7 +223,6 @@
           margin-left: 0;
           margin-right: 6px;
           order: 1;
-          width: 25px;
           white-space: nowrap;
         }
         .talkbox {
@@ -266,6 +272,7 @@
       }
       .createdAt {
         flex: none;
+        width: 25px;
         margin-left: 6px;
         font-size: 12px;
         color: #909ca8;
