@@ -216,6 +216,8 @@
           margin-left: 0;
           margin-right: 6px;
           order: 1;
+          width: 25px;
+          white-space: nowrap;
         }
         .talkbox {
           order: 2;
@@ -239,8 +241,8 @@
         padding: 5px 12px;
         background: #dee2e6;
         border-radius: 8px;
-        flex: 1;
-        max-width: 300px;
+        flex: none;
+        max-width: calc(350px - 32px);
         &:after {
           content: "";
           position: absolute;
