@@ -33,13 +33,14 @@
 
     @media screen and (max-width: 1470px) {
       width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;
       margin-top: 70px;
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
       justify-content: space-between;
       position: static;
-      margin-right: 0;
     }
     @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -53,7 +54,8 @@
     max-width: 1060px;
     @media screen and (max-width: 1470px) {
       margin: 0;
-      max-width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;
     }
   }
   .main__util {

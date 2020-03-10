@@ -295,6 +295,7 @@
       border: none;
       flex: 1;
       font-size: 14px;
+      max-width: calc(100% - 55px);
       &:placeholder {
         color: #ced4da;
       }
