@@ -114,9 +114,11 @@
             border: none;
             height: 20px;
             font-size: 14px;
+            width: 160px;
           }
           button {
             border: none;
+            flex: none
             display: inline-block;
             background: #909ca8;
             color: #fff;
